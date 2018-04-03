@@ -1,0 +1,75 @@
+.modal
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	min-width: 1280px
+	height: 100vh
+	padding: 15px
+	background: rgba(#000, .2)
+	overflow: auto
+	z-index: 999
+	display: none
+	+vertical
+	&__inner
+		display: inline-block
+		vertical-align: middle
+		width: 703px
+		font-size: 14px
+		text-align: left
+	&__top, &__body
+		padding-left: 60px
+		padding-right: 60px
+	&__top
+		position: relative
+		padding-bottom: 30px
+		margin-bottom: 40px
+		border-bottom: 1px solid rgba(#fff, .6)
+	&__img
+		height: 160px
+		border-radius: 4px
+		background-size: cover
+		background-position: center
+	&__title
+		font-size: 24px
+		letter-spacing: .06em
+	&__close
+		position: absolute
+		top: -7px
+		right: 24px
+	&__row
+		+clr
+		margin: 0 -17px
+	&__col
+		float: left
+		width: 50%
+		padding: 0 17px
+	&__body
+		+pop
+	&__main
+		margin-bottom: 40px
+	&__heading
+		margin-bottom: 40px
+		padding-top: 6px
+	&__name
+		+pop
+		font-size: 20px
+		font-weight: 500
+		margin-bottom: 10px
+		letter-spacing: .03em
+	&__subtitle
+		letter-spacing: .08em
+		text-transform: uppercase
+	&__price
+		font-weight: 500
+		font-size: 18px
+		margin-bottom: 7px
+	&__meta
+		+pop
+		font-size: 12px
+		line-height: (16/12)
+		color: #a2a4a6
+	&__meta_info
+		margin-top: 7px
+		text-align: right
+

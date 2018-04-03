@@ -1,0 +1,39 @@
+<div class="modal js-modal" {% if modalShow %}style="display: block;"{% endif %}>
+  <div class="modal__inner">
+    <div class="modal__top">
+      <div class="modal__title">Confirmar Alquiler On Demand</div>
+      <div class="modal__close"><button class="btn-close js-close-modal">{{mixins.icon('close-x')}}</button></div>
+    </div>
+    <div class="modal__body">
+      <div class="modal__main">
+        <div class="modal__row">
+          <div class="modal__col">
+            <div class="modal__img" style="background-image: url('img/toy.jpg')"></div>
+          </div>
+          <div class="modal__col">
+            <div class="modal__heading">
+              <div class="modal__name">Toy Story 3</div>
+              <div class="modal__subtitle">AVENTURA | 98 MIN | 2010 | SD</div>
+            </div>
+            <div class="modal__price">$65.00 por 2 días</div>
+            <div class="modal__meta">
+                Disponible hasta:<br>
+                Jueves 30/01/18 - 15:45hs.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal__btns">
+        <div class="modal__row">
+          <div class="modal__col">
+            <button class="button button_full js-close-modal">CANCELAR</button>
+          </div>
+          <div class="modal__col">
+            <button class="button button_red button_full">ALQUILAR $65.00</button>
+            <div class="modal__meta modal__meta_info">* Este costo vendrá en tu próxima factura.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

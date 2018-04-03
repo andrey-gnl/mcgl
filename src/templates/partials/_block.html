@@ -1,0 +1,65 @@
+<div class="block">
+  <div class="block__gallery">
+    <div class="gallery">
+      <div class="gallery__slider">
+        <a href="#" class="gallery__play play play_big"></a>
+        <div class="gallery__slider-main js-v-slider">
+          <div class="gallery__item"
+            style="background-image: url('img/slider.jpg');"></div>
+          <div class="gallery__item"
+            style="background-image: url('img/slider2.jpeg');"></div>
+        </div>
+      </div>
+      <div class="gallery__controls">
+        <div class="gallery__arr">
+          {{mixins.btnArrTop('js-v-slider-prev')}}
+        </div>
+        <div class="gallery__arr">
+          {{mixins.btnArrBottom('js-v-slider-next')}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block__info">
+    <div class="info">
+      <div class="info__channel">
+        <img src="img/channel.svg"
+          alt="Fox">
+      </div>
+      <div class="info__body">
+        <div class="info__heading">
+          <div class="info__title">Vikings</div>
+          <div class="info__subtitle">T5 / E8 - El chiste</div>
+        </div>
+        <div class="info__text js-ellipsis-parent">
+          <h5>DRAMA | 52 MIN | 2001 | SD</h5>
+          <div class="info__about js-ellipsis">
+            Con los ejércitos frente a frente, Lagertha trata por última vez de alcanzar la paz con Ivar. Floki propone la construcción
+            de un templo que enfrentará a los nuevos colonos y Alfred tiene interesante interesanteinteresante Con los ejércitos
+            frente a frente, Lagertha trata por última vez de alcanzar la paz con Ivar. Floki propone la construcción de
+            un templo que enfrentará a los nuevos colonos y Alfred tiene interesantes…Con los ejércitos frente a frente,
+            Lagertha trata por última vez de alcanzar la paz con Ivar. Floki propone la construcción de un templo que enfrentará
+            a los nuevos colonos y Alfred tiene interesante.
+          </div>
+          <button class="info__more js-ellipsis-toggle"></button>
+        </div>
+        <div class="info__progress">
+          {{mixins.progress()}}
+        </div>
+        <div class="info__buttons">
+          {% if blockButtons == true %}
+            {{mixins.btnIcon('play', 'Play')}}
+            {{mixins.btnIcon('heart', 'Favoritos')}}
+            {{mixins.btnIcon('record', 'Grabar Series')}}
+            {{mixins.btnIcon('proximas', 'Statistic')}}
+            {{mixins.btnIcon('copy', 'Copy')}}
+            {{mixins.btnIcon('timer', 'Timer')}}
+          {% else %}
+          <a href="#" class="button">VER TODOS EN VIVO</a>
+          <a href="#" class="button">VER GRILLA</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+.menu
+	position: relative
+	width: 260px
+	border-radius: 3px
+	background: rgba(#0F1D2B, .9)
+	&__arr
+		position: absolute
+		right: 14px
+		bottom: 100%
+		width: 21px
+		height: 10px
+		overflow: hidden
+		text-align: center
+		z-index: -1
+		&:before
+			content: ''
+			display: inline-block
+			width: 17px
+			height: 17px
+			border-radius: 3px
+			background: rgba(#0F1D2B, .9)
+			transform: translateY(3px) rotate(45deg)
+	&__list
+		padding: 10px 0
+	li
+		padding: 10px 30px
+	a
+		color: #fff
+		opacity: 0.8
+		transition: opacity .3s ease
+		letter-spacing: .06em
+		line-height: 1
+		&:hover
+			opacity: 1
+	.menu__link-big
+		margin-top: 10px
+		padding-top: 20px
+		border-top: 1px solid #1e3a56
+
+.menu_inner
+	$bg: #0f1d2b
+
+	background: $bg
+	box-shadow: 0 -2px 5px rgba(#000, .5)
+	.menu
+		&__arr
+			right: auto
+			left: 15px
+			z-index: 2
+			&:before
+				background: $bg
+				box-shadow: 0 1px 3px black
+
+

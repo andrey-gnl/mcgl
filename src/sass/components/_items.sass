@@ -1,0 +1,171 @@
+.items
+	&:not(:last-child)
+		margin-bottom: 62px
+	&__gallery
+		&:not(.slick-initialized)
+			white-space: nowrap
+			overflow: hidden
+			.item
+				white-space: normal
+	.slick-slide
+		padding: 0 15px
+	.slick-list
+		margin: 0 -15px
+	.slick-arrow
+		position: absolute
+		width: 45px
+		height: 45px
+		top: 85px
+		z-index: 2
+		transition: opacity .3s
+		&.slick-disabled
+			opacity: 0
+	.slick-prev
+		left: -24px
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMiIGhlaWdodD0iNDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxwYXRoIGQ9Ik0xMjA3LjcwNyAxODJhLjU5NS41OTUgMCAxIDEtLjI1IDEuMTY0bC0xOS42LTQuMjA5YS41OTUuNTk1IDAgMCAxLS40NTctLjQ1N2wtNC4yMDktMTkuNmEuNTk1LjU5NSAwIDEgMSAxLjE2NC0uMjVsNC4xMjggMTkuMjI0IDE5LjIyNCA0LjEyOHoiIGlkPSJiIi8+PGZpbHRlciB4PSItNTIlIiB5PSItNTIlIiB3aWR0aD0iMjA0JSIgaGVpZ2h0PSIyMDQlIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJhIj48ZmVPZmZzZXQgZHk9IjEiIGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dPZmZzZXRPdXRlcjEiLz48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyLjUiIGluPSJzaGFkb3dPZmZzZXRPdXRlcjEiIHJlc3VsdD0ic2hhZG93Qmx1ck91dGVyMSIvPjxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMSAwIiBpbj0ic2hhZG93Qmx1ck91dGVyMSIgcmVzdWx0PSJzaGFkb3dNYXRyaXhPdXRlcjEiLz48ZmVPZmZzZXQgZHk9Ii0xIiBpbj0iU291cmNlQWxwaGEiIHJlc3VsdD0ic2hhZG93T2Zmc2V0T3V0ZXIyIi8+PGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMi41IiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIyIiByZXN1bHQ9InNoYWRvd0JsdXJPdXRlcjIiLz48ZmVDb2xvck1hdHJpeCB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAuMDA3ODQzMTM3MjUgMCAwIDAgMCAwLjAxNTY4NjI3NDUgMCAwIDAgMSAwIiBpbj0ic2hhZG93Qmx1ck91dGVyMiIgcmVzdWx0PSJzaGFkb3dNYXRyaXhPdXRlcjIiLz48ZmVNZXJnZT48ZmVNZXJnZU5vZGUgaW49InNoYWRvd01hdHJpeE91dGVyMSIvPjxmZU1lcmdlTm9kZSBpbj0ic2hhZG93TWF0cml4T3V0ZXIyIi8+PC9mZU1lcmdlPjwvZmlsdGVyPjwvZGVmcz48ZyB0cmFuc2Zvcm09InJvdGF0ZSg0NSA3ODQuODMgLTEzMjYuNTAxKSIgZmlsbC1ydWxlPSJub256ZXJvIiBmaWxsPSJub25lIj48dXNlIGZpbGw9IiMwMDAiIGZpbHRlcj0idXJsKCNhKSIgeGxpbms6aHJlZj0iI2IiLz48dXNlIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0iZXZlbm9kZCIgeGxpbms6aHJlZj0iI2IiLz48L2c+PC9zdmc+)
+	.slick-next
+		right: -26px
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMiIGhlaWdodD0iNDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxwYXRoIGQ9Ik0xMjA3LjcwNyAxODJhLjU5NS41OTUgMCAxIDEtLjI1IDEuMTY0bC0xOS42LTQuMjA5YS41OTUuNTk1IDAgMCAxLS40NTctLjQ1N2wtNC4yMDktMTkuNmEuNTk1LjU5NSAwIDEgMSAxLjE2NC0uMjVsNC4xMjggMTkuMjI0IDE5LjIyNCA0LjEyOHoiIGlkPSJiIi8+PGZpbHRlciB4PSItNTIlIiB5PSItNTIlIiB3aWR0aD0iMjA0JSIgaGVpZ2h0PSIyMDQlIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJhIj48ZmVPZmZzZXQgZHk9IjEiIGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dPZmZzZXRPdXRlcjEiLz48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyLjUiIGluPSJzaGFkb3dPZmZzZXRPdXRlcjEiIHJlc3VsdD0ic2hhZG93Qmx1ck91dGVyMSIvPjxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMSAwIiBpbj0ic2hhZG93Qmx1ck91dGVyMSIgcmVzdWx0PSJzaGFkb3dNYXRyaXhPdXRlcjEiLz48ZmVPZmZzZXQgZHk9Ii0xIiBpbj0iU291cmNlQWxwaGEiIHJlc3VsdD0ic2hhZG93T2Zmc2V0T3V0ZXIyIi8+PGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMi41IiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIyIiByZXN1bHQ9InNoYWRvd0JsdXJPdXRlcjIiLz48ZmVDb2xvck1hdHJpeCB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAuMDA3ODQzMTM3MjUgMCAwIDAgMCAwLjAxNTY4NjI3NDUgMCAwIDAgMSAwIiBpbj0ic2hhZG93Qmx1ck91dGVyMiIgcmVzdWx0PSJzaGFkb3dNYXRyaXhPdXRlcjIiLz48ZmVNZXJnZT48ZmVNZXJnZU5vZGUgaW49InNoYWRvd01hdHJpeE91dGVyMSIvPjxmZU1lcmdlTm9kZSBpbj0ic2hhZG93TWF0cml4T3V0ZXIyIi8+PC9mZU1lcmdlPjwvZmlsdGVyPjwvZGVmcz48ZyB0cmFuc2Zvcm09InJvdGF0ZSgtMTM1IDU3MC4wMjYgMzQzLjEzNSkiIGZpbGwtcnVsZT0ibm9uemVybyIgZmlsbD0ibm9uZSI+PHVzZSBmaWxsPSIjMDAwIiBmaWx0ZXI9InVybCgjYSkiIHhsaW5rOmhyZWY9IiNiIi8+PHVzZSBmaWxsPSIjRkZGIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHhsaW5rOmhyZWY9IiNiIi8+PC9nPjwvc3ZnPg==)
+	&__title
+		margin-bottom: 30px
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+	&__change
+		line-height: 1.4
+	&__slide
+		display: inline-block
+		vertical-align: top
+		&:not(:last-child)
+			margin-right: 30px
+
+.item
+	$this: &
+
+	display: block
+	min-width: 276px
+	&.is-removable
+		#{$this}__delete
+			display: flex
+	&__top
+		position: relative
+		height: 210px
+		margin-bottom: 20px
+		border-radius: 4px
+		overflow: hidden
+	&__img
+		display: block
+		height: 100%
+		background-size: cover
+		background-position: center
+		&:hover
+			#{$this}
+				&__play
+					opacity: 1
+	&__play
+		border-radius: 0
+	&__name
+		display: inline
+		color: #fff
+		+pop
+		font-size: 16px
+		transition: color .3s
+		cursor: pointer
+		&:after
+			content: '>'
+			color: inherit
+			display: inline-block
+			vertical-align: middle
+			position: relative
+			top: 1px
+			width: 10px
+			margin-left: 10px
+		&:hover
+			color: $c-blue
+			span
+				text-decoration: underline
+		span
+			position: relative
+			display: inline-block
+			vertical-align: middle
+			max-width: 90%
+			max-width: calc(100% - 25px)
+			color: inherit
+			overflow: hidden
+			white-space: nowrap
+			text-overflow: ellipsis
+	&__logo
+		position: absolute
+		top: 20px
+		right: 20px
+		width: 100px
+		z-index: 1
+		img
+			max-width: 100%
+			height: auto
+	&__info
+		display: flex
+		align-items: center
+		min-height: 93px
+		margin-top: 20px
+		padding: 14px 30px
+		border-radius: 3px
+		background: #000
+		border: 1px solid #081c26
+	&__text
+		+pop
+		font-size: 12px
+		font-weight: 300
+		color: #99999a
+		line-height: 1.4
+		p
+			&:not(:last-child)
+				margin-bottom: 7px
+		strong
+			display: block
+			font-size: 18px
+			font-weight: 500
+			color: #fff
+			letter-spacing: 0.06em
+			line-height: 1
+			margin-bottom: 7px
+	&__delete
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		display: none
+		align-items: center
+		justify-content: center
+		background: rgba(#0F1D2B , .9)
+		z-index: 99
+		+gpu
+		.icon
+			fill: #fff
+			font-size: 40px
+
+.item_mod
+	.item
+		&__img
+			&:hover
+				&:after
+					opacity: 0
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				border-radius: inherit
+				background: rgba(#143D45, .4)
+				transition: opacity .3s
+
+.c-item
+	&__title
+		margin-bottom: 30px
+
+
+
+

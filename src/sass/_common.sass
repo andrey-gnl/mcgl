@@ -1,0 +1,59 @@
+html
+	min-height: 100%
+
+body
+	min-width: 1280px
+
+	background: #030f15 url('../img/bg2x.png') top center / 100%
+	+reg
+	font-size: 14px
+	line-height: 1.1
+	color: #fff
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	&.is-blured
+		.page
+			filter: blur(70px)
+
+.page
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	transition: filter .3s
+
+.out
+	flex: 1 0 auto
+
+.slick-arrow
+	width: 35px
+	height: 35px
+	font-size: 0
+
+.slick-prev
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTIuMSAzNC45IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxMi4xIDM0Ljk7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48dGl0bGU+UmVjdGFuZ2xlIENvcHkgMzwvdGl0bGU+PGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+PGcgaWQ9IkRlc2lnbnMiPjxnIGlkPSJfeDMwXzAxLS0tTUNHTC0tLUhvbWUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00MC4wMDAwMDAsIC0zMjIuMDAwMDAwKSI+PGcgaWQ9Ikhlcm8tSW1hZ2UtLS1EZXN0YWNhZG9zIj48ZyBpZD0ic2xpZGVzaG93LWhvbWVfeDJGX0Rlc2t0b3AiPjxnIGlkPSJjaGV2cm9ucyI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQuMDAwMDAwLCAzMjIuMDAwMDAwKSI+PHBhdGggaWQ9IlJlY3RhbmdsZS1Db3B5LTMiIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMTgsMC45YzAuMi0wLjMsMC4xLTAuNi0wLjItMC44QzE3LjUtMC4xLDE3LjIsMCwxNywwLjNMNi4xLDE3LjFjLTAuMSwwLjItMC4xLDAuNCwwLDAuNkwxNywzNC42YzAuMiwwLjMsMC41LDAuNCwwLjgsMC4yYzAuMy0wLjIsMC40LTAuNSwwLjItMC44TDcuMywxNy40TDE4LDAuOXoiLz48L2c+PC9nPjwvZz48L2c+PC9nPjwvZz48L3N2Zz4=)
+	background-size: contain
+	background-position: center
+	background-repeat: no-repeat
+	background-color: transparent
+
+.slick-next
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTIuMSAzNC45IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxMi4xIDM0Ljk7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48dGl0bGU+UmVjdGFuZ2xlPC90aXRsZT48ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz48ZyBpZD0iRGVzaWducyI+PGcgaWQ9Il94MzBfMDEtLS1NQ0dMLS0tSG9tZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMjguMDAwMDAwLCAtMzIyLjAwMDAwMCkiPjxnIGlkPSJIZXJvLUltYWdlLS0tRGVzdGFjYWRvcyI+PGcgaWQ9InNsaWRlc2hvdy1ob21lX3gyRl9EZXNrdG9wIj48ZyBpZD0iY2hldnJvbnMiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM0LjAwMDAwMCwgMzIyLjAwMDAwMCkiPjxwYXRoIGlkPSJSZWN0YW5nbGUiIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMTE5NC4xLDAuOWMtMC4yLTAuMy0wLjEtMC42LDAuMi0wLjhjMC4zLTAuMiwwLjYtMC4xLDAuOCwwLjJsMTAuOSwxNi44YzAuMSwwLjIsMC4xLDAuNCwwLDAuNmwtMTAuOSwxNi44Yy0wLjIsMC4zLTAuNSwwLjQtMC44LDAuMmMtMC4zLTAuMi0wLjQtMC41LTAuMi0wLjhsMTAuNy0xNi41TDExOTQuMSwwLjl6Ii8+PC9nPjwvZz48L2c+PC9nPjwvZz48L2c+PC9zdmc+)
+	background-size: contain
+	background-position: center
+	background-repeat: no-repeat
+	background-color: transparent
+
+.dropmenu
+	text-transform: uppercase
+	font-size: 15px
+	letter-spacing: 0.06em
+	.icon
+		font-size: 3px
+		fill: #fff
+		margin-left: 6px
+		vertical-align: middle
+		position: relative
+		top: -1px
+
+.no-scroll
+	overflow: hidden

@@ -1,0 +1,109 @@
+---
+title: 003-MCGL-EnVivo-Reproductor
+blockButtons: true
+noScroll: true
+---
+{% extends "layouts/_layout.html" %}
+{% block content %}
+  <section class="section">
+    <div class="container">
+      <div class="section__title">
+        <h2 class="h2">GRILLA EN VIVO</h2>
+        <div class="section__btn">
+          <a href="#" class="button">VER EN VIVO</a>
+        </div>
+      </div>
+      <div class="section__body">
+        {% include "partials/_block.html" %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__title">
+        <h3 class="h3">Tambien puedes ver...</h3>
+      </div>
+      <div class="section__body">
+        {% include 'partials/_cards.html' %}
+      </div>
+      <div class="section__select">
+        <div class="dropmenu">VER MAS EN VIVO {{mixins.icon('chevron')}}</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="player">
+    <div class="player__video">
+      <div class="player__back">
+        {{mixins.btnIcon('back', circle=true)}}
+      </div>
+      <video src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" contorls="false"></video>
+    </div>
+    <div class="player__bottom">
+      <div class="player__progress">
+        {{mixins.progress(false)}}
+      </div>
+      <div class="player__controls">
+        <div class="player__btns-wrap">
+          <div class="player__btns">
+            <div class="player__btn">
+              {{mixins.btnIcon('pause')}}
+            </div>
+            <div class="player__btn">
+              {{mixins.btnIcon('stop')}}
+            </div>
+            <div class="player__btn">
+              {{mixins.btnIcon('startover')}}
+            </div>
+            <div class="player__btn">
+              {{mixins.btnIcon('record')}}
+            </div>
+          </div>
+        </div>
+        <div class="player__body">
+          <div class="player__top">
+
+            <div class="player__time">
+              <div class="player__label">
+                {{mixins.label('En Vivo')}}
+              </div>
+              02:53:45 PM
+            </div>
+
+            <div class="player__additional">
+              {{mixins.btnIcon('chromecast', circle=true)}}
+              {{mixins.btnIcon('subtitles', circle=true)}}
+              {{mixins.btnIcon('fullscreen', circle=true)}}
+            </div>
+
+          </div>
+          <div class="player__schedule">
+            <a href="#" class="player__channel">
+              <img src="img/channel.svg" alt="fox">
+            </a>
+            <div class="player__list">
+              <div class="player__programm is-active">
+                <span>02:40 PM</span>
+                Vikings
+              </div>
+              <div class="player__programm">
+                <span>03:40 PM</span>
+                Demolición
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="player__arrows">
+          <div class="player__arrow">
+            {{mixins.btnArrTop()}}
+          </div>
+          <div class="player__arrow">
+              {{mixins.btnArrBottom()}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+

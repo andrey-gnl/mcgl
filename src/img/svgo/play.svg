@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-play</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="002---MCGL---En-Vivo---Default" transform="translate(-244.000000, -357.000000)">
+            <g id="Hero-Image---EN-VIVO">
+                <g id="Content" transform="translate(40.000000, 145.000000)">
+                    <g id="Player" transform="translate(1.000000, 88.000000)">
+                        <g id="En-vivo---Player">
+                            <g id="icon-play" transform="translate(204.000000, 125.000000)">
+                                <circle id="Oval-2" stroke="#FFFFFF" stroke-width="2" fill-opacity="0.4" fill="#000204" cx="35" cy="35" r="35"></circle>
+                                <path d="M38.4852249,24.1328016 L53.5166006,45.2880711 C53.6765443,45.5131769 53.6237198,45.8253212 53.398614,45.9852648 C53.3140099,46.0453783 53.2127962,46.0776746 53.1090104,46.0776746 L23.0462591,46.0776746 C22.7701167,46.0776746 22.5462591,45.853817 22.5462591,45.5776746 C22.5462591,45.4738889 22.5785554,45.3726752 22.6386689,45.2880711 L37.6700445,24.1328016 C37.8299882,23.9076957 38.1421325,23.8548713 38.3672383,24.014815 C38.4128982,24.0472575 38.4527824,24.0871417 38.4852249,24.1328016 Z" id="Triangle-2" fill="#42BFFE" transform="translate(38.077655, 35.000020) rotate(-270.000000) translate(-38.077655, -35.000020) "></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

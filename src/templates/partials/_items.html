@@ -1,0 +1,41 @@
+{% set items = [
+  {
+    img: 'img/item1.jpg',
+    name: 'La vigilante del futuro'
+  }, {
+    img: 'img/item2.jpg',
+    name: 'Salt & Fire'
+  }, {
+    img: 'img/item3.jpg',
+    name: 'Logan'
+  }, {
+    img: 'img/item4.jpg',
+    name: 'Moonrise Kingdom'
+  }, {
+    img: 'img/item2.jpg',
+    name: 'Salt & Fire'
+  }
+] %}
+
+{% set blocks = [
+  {
+    title: 'Películas',
+    items: items | reverse
+  }, {
+    title: 'Series',
+    items: items
+  }, {
+    title: 'Deportes',
+    items: items | reverse
+  }, {
+    title: 'Infantiles',
+    items: items
+  }, {
+    title: 'Culturales',
+    items: items
+  }
+]%}
+
+{% for block in blocks %}
+  {{mixins.items(block.title, block.items)}}
+{%endfor%}

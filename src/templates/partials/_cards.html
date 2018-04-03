@@ -1,0 +1,50 @@
+{% set cards = [
+  {
+    title: 'Moonrise Kingdom',
+    subtitle: 'Película',
+    description: 'AVENTURA | 94 MIN | 2012 | SD',
+    img: 'card',
+    channel: 'channel2'
+  }, {
+    title: 'Silicon Valley',
+    subtitle: 'T2 / E3 - Pied Piper',
+    description: 'COMEDIA | 25 MIN | 2016 | HD',
+    img: 'sv',
+    channel: 'hbo'
+  }, {
+    title: 'Laland',
+    subtitle: 'T2 / E3 - Pied Piper',
+    description: 'COMEDIA | 112 MIN | 2017 | HD',
+    img: 'lalaland',
+    channel: 'sat'
+  }
+] %}
+
+{% for card in cards %}
+<div class="card">
+  <a href="#" class="card__img" style="background-image: url('img/{{card.img}}.jpg')"></a>
+  <div class="card__info">
+    <div class="info info_simple">
+      <div class="info__top">
+        <a href="#" class="info__channel">
+          <img src="img/{{card.channel}}.svg" alt="Sena">
+        </a>
+        <div class="info__body">
+          <div class="info__heading">
+            <a href="#" class="info__title">{{card.title}}</a>
+            <div class="info__subtitle">{{card.subtitle}}</div>
+          </div>
+          <div class="info__text">
+            <h5>{{card.description}}</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="info__progress">
+        {{mixins.progress()}}
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endfor %}

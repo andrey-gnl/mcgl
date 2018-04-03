@@ -1,0 +1,134 @@
+.button
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	height: 40px
+	min-width: 174px
+	padding: 4px 15px
+	outline: 0
+	border: 1px solid currentColor
+	border-radius: 4px
+	color: #fff
+	background: none
+	+reg
+	font-size: 15px
+	text-align: center
+	line-height: 1
+	letter-spacing: 0.08em
+	text-transform: uppercase
+	transition: color .3s, border .3s
+	cursor: pointer
+	.icon
+		color: inherit
+		fill: currentColor
+		font-size: 10px
+		margin-right: 10px
+		transition: fill .3s
+	&:not(.button_red):hover
+		color: $c-blue
+
+.button_full
+	width: 100%
+
+.button_red
+	background: #FC3F3F
+	border-color: #FC3F3F
+	transition: background .3s, border .3s
+	&:hover
+		$bg: darken(#FC3F3F, 20%)
+		background: $bg
+		border-color: $bg
+
+.btn
+	$this: &
+
+	position: relative
+	display: inline-flex
+	vertical-align: top
+	align-items: center
+	justify-content: center
+	width: 50px
+	height: 40px
+	border: 1px solid currentColor
+	border-radius: 4px
+	color: #fff
+	background: none
+	cursor: pointer
+	transition: color .3s, border .3s
+	+ #{$this}
+		margin-left: 20px
+	&:hover, &.is-selected
+		color: $c-blue
+		#{$this}__text
+			opacity: 1
+			visibility: visible
+	&.is-selected
+		background: rgba($c-blue, .1)
+	&__icon
+		font-size: 0
+	.icon
+		color: inherit
+		fill: currentColor
+		font-size: 10px
+		vertical-align: top
+		max-width: 15px
+	.icon-record
+		font-size: 12px
+	.icon-copy, .icon-timer
+		font-size: 13px
+	.icon-timer
+		font-size: 14px
+	.icon-money
+		font-size: 11px
+	&__text
+		+reg
+		position: absolute
+		top: 100%
+		left: 0
+		margin-top: 9px
+		white-space: nowrap
+		line-height: 1
+		font-size: 15px
+		color: $c-blue
+		text-transform: uppercase
+		opacity: 0
+		visibility: hidden
+		transition: opacity .3s, visibility .3s
+
+.btn_circle
+	width: 40px
+	height: 40px
+	border-radius: 50%
+	.icon
+		max-width: none
+		font-size: 12px
+
+.btn-arr
+	position: relative
+	background: none
+	width: 40px
+	height: 40px
+	display: flex
+	align-items: center
+	justify-content: center
+	transition: transform .3s
+	&:active
+		transform: scale(0.8)
+	&_top
+		i
+			+arr(30, 20, #fff, 't')
+	&_bottom
+		i
+			+arr(30, 20, #fff, 'b')
+
+.btn-close
+	width: 40px
+	height: 40px
+	display: flex
+	align-items: center
+	justify-content: center
+	background: none
+	.icon
+		fill: #fff
+		font-size: 15px
+

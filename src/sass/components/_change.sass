@@ -1,0 +1,11 @@
+.change
+	$this: &
+
+	text-align: right
+	&.is-active
+		#{$this}__final
+			display: block
+		#{$this}__edit
+			display: none
+	&__final
+		display: none

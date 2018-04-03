@@ -1,0 +1,9 @@
+<svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        icon-play
+    </title>
+    <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+        <circle stroke="#FFF" stroke-width="2" fill-opacity=".4" fill="#000204" cx="35" cy="35" r="35"/>
+        <path d="M48.945 35.408L27.79 50.439a.5.5 0 0 1-.79-.408V19.97a.5.5 0 0 1 .79-.408l21.155 15.031a.5.5 0 0 1 0 .816z" fill="#42BFFE"/>
+    </g>
+</svg>

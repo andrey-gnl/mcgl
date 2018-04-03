@@ -1,0 +1,294 @@
+$calendarMainWidth: 6370px
+$calendarAsideWidth: 173px
+$calendarAsideWidthPhone: 123px
+
+$calendarDaysHeight: 60px
+$calendarHoursHeight: 76px
+$calendarItemHeight: 65px
+
+.awesome-calendar
+	overflow: hidden
+	border-radius: 4px 4px 0 0
+	text-align: left
+	+clr
+	+pop
+	//START TOP LINE
+	&__top-line
+		overflow: auto
+		color: #fff
+		background: #000
+		+clr
+	&__days
+		overflow: hidden
+		&-container
+			min-width: 1180px
+		//controls
+		&-prev,
+		&-next
+			position: relative
+			padding: 0 20px
+			height: $calendarDaysHeight
+			color: inherit
+			background: none
+			font-family: inherit
+			color: #99999a
+			+f(14px, 400, 18px)
+			text-transform: uppercase
+			transition: color 0.25s
+			&:hover
+				color: #fff
+		&-prev
+			float: left
+			padding-left: 37px
+		&-next
+			float: right
+			padding-right: 37px
+		&-icon
+			position: absolute
+			top: 50%
+			margin-top: -0.5em
+			font-size: 8px
+			fill: #fff
+			&-prev
+				left: 8px
+			&-next
+				right: 8px
+		//items
+		&-list
+			font-size: 0
+			text-align: center
+		&-item
+			display: inline-block
+			vertical-align: top
+			width: (100%/8)
+			+f(14px, 400, 18px)
+			text-transform: uppercase
+			cursor: pointer
+			color: #99999a
+			transition: color 0.25s
+			letter-spacing: 0.08em
+			&.is-active
+				color: #fff
+				+f(16px, 500)
+				letter-spacing: 0.15em
+				.awesome-calendar__days-item-in
+					&:before
+						transform: scaleY(1)
+			&:hover
+				color: #fff
+			&-in
+				position: relative
+				display: inline-block
+				vertical-align: top
+				padding: 21px 9px
+				height: $calendarDaysHeight
+				+text-overflow
+				&:before
+					content: ''
+					position: absolute
+					left: 9px
+					bottom: 0
+					height: 4px
+					width: 20px
+					background: #fff
+					transform: scaleY(0)
+					transform-origin: center bottom
+					transition: transform 0.2s
+	//END TOP LINE
+
+	//START MIDDLE LINE
+	&__middle-line
+		position: relative
+		z-index: 2
+		height: $calendarHoursHeight
+		color: #fff
+		background: #0e1b29
+	//END MIDDLE LINE
+
+	//START ASIDE
+	&__aside
+		position: relative
+		z-index: 2
+		float: left
+		width: $calendarAsideWidth
+	&__info
+		padding: 12px 10px 10px 20px
+	&__title
+		+f(24px, 500, 24px)
+		text-transform: uppercase
+		+text-overflow
+		+xs
+			+f(20px)
+	&__meta
+		color: #9ea3a9
+		+f(14px, 400, 14px)
+		letter-spacing: 0.88px
+		+text-overflow
+		+xs
+			+f(13px)
+
+	&__channels
+		background: #000204
+	&__channel
+		position: relative
+		padding: 14px 14px 14px 10px
+		+clr
+		&-logo
+			float: right
+			padding: 6px
+			width: 56px
+			height: 37px
+			display: flex
+			align-items: center
+			justify-content: center
+			+xs
+				display: none
+			img
+				max-width: 100%
+				max-height: 100%
+		&-info
+			overflow: hidden
+			padding: 5px 10px 4px 0
+			color: #99999a
+			+pop
+			+f(12px, 300, 12px)
+			letter-spacing: 0.5px
+			text-transform: uppercase
+		&-name
+			margin-bottom: 3px
+		&-name,
+		&-number
+			+text-overflow
+	&__favorites
+		position: absolute
+		top: 0
+		right: 0
+		padding: 3px
+		background: none
+		font-size: 0
+		cursor: pointer
+		+nosel
+		input
+			display: none
+			&:checked
+				~ .awesome-calendar__favorites-filled
+					opacity: 1
+		&-empty,
+		&-filled
+			font-size: 11px
+		&-empty
+			fill: #000
+		&-filled
+			position: absolute
+			top: 3px
+			right: 3px
+			fill: #000
+			opacity: 0
+			transition: opacity 0.25s
+	//END ASIDE
+
+	//START MAIN
+	&__main-line
+		overflow: auto
+		max-height: 735px
+	&__main
+		position: relative
+		overflow: hidden
+		&-in
+			overflow: auto
+	&__body
+		position: relative
+		overflow: hidden
+		width: $calendarMainWidth
+	&__time
+		font-size: 0
+		&-prev,
+		&-next
+			position: absolute
+			z-index: 4
+			top: 0
+			width: 20px
+			height: $calendarHoursHeight
+			background: #0e1b29
+			+vertical
+		&-prev
+			left: 0
+		&-next
+			right: 0
+		&-icon
+			display: inline-block
+			vertical-align: middle
+			fill: #fff
+			+f(8px)
+		&-item
+			display: inline-block
+			vertical-align: top
+			padding: 27px 20px 28px
+			width: ($calendarMainWidth/49)
+			height: $calendarHoursHeight
+			+f(14px, 300, 21px)
+			text-align: center
+			text-transform: uppercase
+			+text-overflow
+		&-line
+			position: absolute
+			z-index: 2
+			top: 25px
+			left: 0
+			bottom: 0
+			border-left: 2px solid $c-blue
+	&__row
+		font-size: 0
+		&:nth-child(odd)
+			.awesome-calendar__item:first-child
+				border-left: 2px solid #0f1d2b
+	&__item
+		position: relative
+		display: inline-block
+		vertical-align: top
+		height: $calendarItemHeight
+		background: #02060a
+		cursor: pointer
+		&:hover
+			&:before
+				opacity: 1
+				z-index: 1
+			.awesome-calendar__item
+				&-container
+					z-index: 2
+					transform: translate3d(8px, -3px, 0)
+				&-time
+					display: none
+				&-meta
+					display: block
+		&:not(:first-child)
+			border-left: 2px solid #0f1d2b
+		&_gray
+			background: rgba(#000204, .2)
+		&:before
+			content: ''
+			position: absolute
+			top: -10px
+			left: -21px
+			right: -12px
+			bottom: -6px
+			border-left: 2px solid #fff
+			opacity: 0
+			background: #0f1d2b
+			box-shadow: 0 2px 14px 0 rgba(15,29,43,0.20)
+		&-container
+			position: relative
+			padding: 15px 20px 14px 18px
+			+f(14px, 400, 18px)
+		&-meta
+			display: none
+		&-name
+			font-size: 14px
+		&-time,
+		&-meta
+			color: #9ea3a9
+		&-name,
+		&-time,
+		&-meta
+			+text-overflow
+	//END MAIN

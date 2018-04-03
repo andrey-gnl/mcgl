@@ -1,0 +1,47 @@
+---
+title: 012-MCGL-MiMC-Misalquileres
+mimc: true
+activeMimc: 1
+---
+{% extends "layouts/_layout.html" %}
+{% block content %}
+
+  <section class="section section_lg">
+    <div class="container">
+      <div class="section__title">
+        <h2 class="h2">MIS ALQUILERES</h2>
+        {{mixins.select(false, ['Todas las Categorias', 'Item 1', 'Item 2', 'Item 3'])}}
+      </div>
+      <div class="section__body">
+        <div class="items">
+          <div class="items__title title">
+            <h3 class="h3">Películas</h3>
+          </div>
+          <div class="items__gallery">
+            <div class="row row_mb row_inline">
+              <div class="col-4">
+                {{mixins.item(name="Tory story 3", img="img/toy.jpg", infoBig=true)}}
+              </div>
+              <div class="col-4">
+                {{mixins.item(name="Pulp Fiction", img="img/toy.jpg", info=true)}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="items">
+            <div class="items__title title">
+              <h3 class="h3">Culturales</h3>
+            </div>
+            <div class="items__gallery">
+              <div class="row row_mb row_inline">
+                <div class="col-4">
+                  {{mixins.item(name="George Harrison: Living in a Material World", img="img/toy.jpg", info=true)}}
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+

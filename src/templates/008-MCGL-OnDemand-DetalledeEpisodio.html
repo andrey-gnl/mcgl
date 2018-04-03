@@ -1,0 +1,15 @@
+---
+title: 008-MCGL-OnDemand-DetalledeEpisodio
+
+---
+{% extends "layouts/_layout.html" %}
+{% block content %}
+
+  {{mixins.breadcrumbs(['Series', 'Game of Thrones'])}}
+
+  <section class="section">
+    <div class="container">
+      {{mixins.movie(img="img/got2.jpg", links=true, favourite=false, h5="DRAMA | 52 MIN | 200")}}
+    </div>
+  </section>
+{% endblock %}

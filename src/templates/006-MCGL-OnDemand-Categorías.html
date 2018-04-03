@@ -1,0 +1,20 @@
+---
+title: 006-MCGL-OnDemand-Categorías
+demand: true
+category: 'Peliculas'
+---
+{% extends "layouts/_layout.html" %}
+{% block content %}
+
+  <section class="section">
+    <div class="container">
+      <div class="section__title">
+        <h2 class="h2">PELÍCULAS - ON DEMAN</h2>
+      </div>
+      <div class="section__body">
+        {% include "partials/_items.html" %}
+      </div>
+    </div>
+  </section>
+{% endblock %}
+

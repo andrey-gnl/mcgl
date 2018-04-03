@@ -1,0 +1,30 @@
+.user
+	position: relative
+	.icon
+		fill: #fff
+	.icon-chevron
+		font-size: 4px
+		vertical-align: middle
+	&__btn
+		display: block
+		cursor: pointer
+	&__pic
+		display: inline-block
+		vertical-align: middle
+		margin-right: 3px
+		.icon
+			vertical-align: top
+			font-size: 25px
+	&__menu
+		position: absolute
+		right: 0
+		top: 100%
+		margin-top: 30px
+		opacity: 0
+		visibility: hidden
+		transform: translateY(-10px)
+		transition: opacity .3s ease, visibility .3s ease, transform .3s ease
+		&.is-open
+			opacity: 1
+			visibility: visible
+			transform: translateY(0)

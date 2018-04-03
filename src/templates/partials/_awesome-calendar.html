@@ -1,0 +1,160 @@
+<!-- begin awesome-calendar -->
+<div class="awesome-calendar">
+	<div class="awesome-calendar__top-line">
+		<div class="awesome-calendar__days-container">
+			<button class="awesome-calendar__days-prev">
+				{{mixins.icon('prev', 'awesome-calendar__days-icon awesome-calendar__days-icon-prev')}}
+				SEM PASADA
+			</button>
+			<button class="awesome-calendar__days-next">
+				{{mixins.icon('next', 'awesome-calendar__days-icon awesome-calendar__days-icon-next')}}
+				SEM SIGUIENTE
+			</button>
+			<div class="awesome-calendar__days">
+				<ul class="awesome-calendar__days-list">
+					{% for item in [
+						{ text: 'AYER' },
+						{ text: 'HOY', classList: 'is-active' },
+						{ text: 'MAÑANA' },
+						{ text: 'JUE 18/01' },
+						{ text: 'VIE 19/01' },
+						{ text: 'SÁB 20/01' },
+						{ text: 'DOM 21/01' },
+						{ text: 'LUN 22/01' }
+					] %}
+						<li class="awesome-calendar__days-item {{item.classList}}">
+							<div class="awesome-calendar__days-item-in">{{item.text}}</div>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+	{% set calendarItemsRange = 20 %}
+	<div class="awesome-calendar__main-line">
+		<div class="awesome-calendar__aside">
+			<div class="awesome-calendar__middle-line">
+				<div class="awesome-calendar__info">
+					<div class="awesome-calendar__title">Hoy</div>
+					<div class="awesome-calendar__meta">MARTES 16</div>
+					<div class="awesome-calendar__meta">DE ENERO</div>
+				</div>
+			</div>
+			<div class="awesome-calendar__channels">
+				<ul class="awesome-calendar__channels-list">
+					{% for item in range(0,calendarItemsRange) %}
+						<li class="awesome-calendar__channel">
+							<div class="awesome-calendar__channel-logo">
+								<img src="img/channel-logo.svg" alt="CineCanal">
+							</div>
+							<div class="awesome-calendar__channel-info">
+								<div class="awesome-calendar__channel-name">CineCanal</div>
+								<div class="awesome-calendar__channel-number">{{loop.index}}</div>
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="awesome-calendar__main">
+			<button class="awesome-calendar__time-prev">
+				{{mixins.icon('prev', 'awesome-calendar__time-icon')}}
+			</button>
+			<button class="awesome-calendar__time-next">
+				{{mixins.icon('next', 'awesome-calendar__time-icon')}}
+			</button>
+			<div class="awesome-calendar__main-in">
+				<div class="awesome-calendar__body">
+					<div class="awesome-calendar__middle-line">
+						<ul class="awesome-calendar__time">
+							{% for item in [
+								'00:00',
+								'00:30',
+								'01:00',
+								'01:30',
+								'02:00',
+								'02:30',
+								'03:00',
+								'03:30',
+								'04:00',
+								'04:30',
+								'05:00',
+								'05:30',
+								'06:00',
+								'06:30',
+								'07:00',
+								'07:30',
+								'08:00',
+								'08:30',
+								'09:00',
+								'09:30',
+								'10:00',
+								'10:30',
+								'11:00',
+								'11:30',
+								'12:00',
+								'12:30',
+								'13:00',
+								'13:30',
+								'14:00',
+								'14:30',
+								'15:00',
+								'15:30',
+								'16:00',
+								'16:30',
+								'17:00',
+								'17:30',
+								'18:00',
+								'18:30',
+								'19:00',
+								'19:30',
+								'20:00',
+								'20:30',
+								'21:00',
+								'21:30',
+								'22:00',
+								'22:30',
+								'23:00',
+								'23:30',
+								'&nbsp;'
+							] %}
+								<li class="awesome-calendar__time-item">{{item | safe}}</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="awesome-calendar__container">
+						{% set calendarItem = '
+							<div class="awesome-calendar__item-container">
+								<div class="awesome-calendar__item-name">X-Men</div>
+								<div class="awesome-calendar__item-time">19:30</div>
+								<div class="awesome-calendar__item-meta">DRAMA | 18:00  52 MIN | 2001 | SD</div>
+							</div>
+						' %}
+						{% for item in range(0,calendarItemsRange) %}
+							{% set index = loop.index %}
+							<div class="awesome-calendar__row">
+								{% for item in range(0,10) %}
+									{% if index % 2 == 0 %}
+										{% if loop.index % 2 == 0 %}
+											<div class="awesome-calendar__item awesome-calendar__item_gray" style="width: 335px; "data-modal-control="calendar">{{calendarItem | safe}}</div>
+										{% else %}
+											<div class="awesome-calendar__item" style="width: 939px;" data-modal-control="calendar">{{calendarItem | safe}}</div>
+										{% endif %}
+									{% else %}
+									    {% if loop.index % 2 != 0 %}
+									    	<div class="awesome-calendar__item awesome-calendar__item_gray" style="width: 335px;" data-modal-control="calendar">{{calendarItem | safe}}</div>
+									    {% else %}
+									    	<div class="awesome-calendar__item" style="width: 939px;" data-modal-control="calendar">{{calendarItem | safe}}</div>
+									    {% endif %}
+									{% endif %}
+								{% endfor %}
+							</div>
+						{% endfor %}
+					</div>
+					<div class="awesome-calendar__time-line" style="left: 519px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end awesome-calendar -->

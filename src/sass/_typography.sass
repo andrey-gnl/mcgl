@@ -1,0 +1,68 @@
++font('Arboria-Book', Arboria-Book)
++font('Arboria-Medium', Arboria-Medium)
+
+=reg
+	font-family: 'Arboria-Book', Arial, Helvetica, sans-serif
+
+=med
+	font-family: 'Arboria-Medium', Arial, Helvetica, sans-serif
+
+=pop
+	font-family: 'Poppins', Arial, Helvetica, sans-serif
+
+h2, .h2
+	color: #fff
+	text-transform: uppercase
+	+reg
+	font-weight: normal
+	font-size: 30px
+	letter-spacing: .04em
+
+h3, .h3
+	color: #fff
+	+reg
+	font-weight: normal
+	font-size: 24px
+	letter-spacing: 0.08em
+
+.title
+	padding-bottom: 5px
+	border-bottom: 2px solid #0e222e
+
+.label
+	display: inline-block
+	padding: 6px 6px 3px
+	border-radius: 4px
+	background: #42BFFE
+	color: #fff
+	+pop
+	font-weight: 300
+	text-transform: uppercase
+	font-size: 14px
+	line-height: 1
+	letter-spacing: .05em
+
+.text-right
+	text-align: right
+
+.link
+	display: inline-block
+	vertical-align: top
+	text-transform: uppercase
+	font-size: 15px
+	letter-spacing: .06em
+	color: #fff
+	transition: color .3s
+	+ .link
+		margin-left: 20px
+	&.is-active, &:hover
+		color: $c-blue
+	.icon
+		fill: currentColor
+		margin-right: 4px
+		display: inline-block
+		vertical-align: middle
+	span
+		display: inline-block
+		vertical-align: middle
+		line-height: 1

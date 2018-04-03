@@ -1,0 +1,41 @@
+---
+title: 017-MCGL-MiMC-MisRecordatorios-Si
+mimc: true
+activeMimc: 1
+---
+{% extends "layouts/_layout.html" %}
+{% block content %}
+
+  <section class="section section_lg">
+    <div class="container">
+      <div class="section__title">
+        <h2 class="h2">MIS RECORDATORIOS AGENDADOS</h2>
+        {{mixins.select(false, ['Películas', 'Item 1', 'Item 2', 'Item 3'])}}
+      </div>
+      <div class="section__body">
+        <div class="items js-items">
+          <div class="items__title title">
+            <h3 class="h3">Películas</h3>
+            <div class="items__change change js-change">
+              <div class="change__edit">
+                <a href="#" class="link js-change-edit">{{mixins.icon('pencil')}} <span>Editar</span></a>
+              </div>
+              <div class="change__final">
+                <a href="#" class="link js-edit-cancel">{{mixins.icon('close')}} <span>Cancelar</span></a>
+                <a href="#" class="link is-active js-edit-save">{{mixins.icon('done')}} <span>Guardar</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="items__gallery">
+            <div class="row row_mb row_inline">
+              <div class="col-4">
+                {{mixins.item(name="Tory story 3", img="img/toy.jpg", infoBig2=true, class="js-item", canDelete=true)}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+

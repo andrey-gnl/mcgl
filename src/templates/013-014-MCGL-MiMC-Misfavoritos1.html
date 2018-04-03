@@ -1,0 +1,66 @@
+---
+title: 013-014-MCGL-MiMC-Misfavoritos1
+mimc: true
+activeMimc: 2
+---
+{% extends "layouts/_layout.html" %}
+{% block content %}
+
+  <section class="section section_lg">
+    <div class="container">
+      <div class="section__title">
+        <h2 class="h2">MIS FAVORITOS</h2>
+        {{mixins.select(false, ['Todas las Categorias', 'Item 1', 'Item 2', 'Item 3'])}}
+      </div>
+      <div class="section__body">
+        <div class="items js-items">
+          <div class="items__title title">
+            <h3 class="h3">Películas</h3>
+            <div class="items__change change js-change">
+              <div class="change__edit">
+                <a href="#" class="link js-change-edit">{{mixins.icon('pencil')}} <span>Editar</span></a>
+              </div>
+              <div class="change__final">
+                <a href="#" class="link js-edit-cancel">{{mixins.icon('close')}} <span>Cancelar</span></a>
+                <a href="#" class="link is-active js-edit-save">{{mixins.icon('done')}} <span>Guardar</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="items__gallery">
+            <div class="row row_mb row_inline">
+              <div class="col-4">
+                {{mixins.item(name="Tory story 3", img="img/got.jpg", class="js-item", canDelete=true)}}
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="items js-items">
+            <div class="items__title title">
+              <h3 class="h3">Culturales</h3>
+              <div class="items__change change js-change">
+                <div class="change__edit">
+                  <a href="#" class="link js-change-edit">{{mixins.icon('pencil')}} <span>Editar</span></a>
+                </div>
+                <div class="change__final">
+                  <a href="#" class="link js-edit-cancel">{{mixins.icon('close')}} <span>Cancelar</span></a>
+                  <a href="#" class="link is-active js-edit-save">{{mixins.icon('done')}} <span>Guardar</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="items__gallery">
+              <div class="row row_mb row_inline">
+                <div class="col-4">
+                  {{mixins.item(name="George Harrison: Living in a Material World", img="img/got2.jpg", class="js-item", canDelete=true)}}
+                </div>
+                <div class="col-4">
+                  {{mixins.item(name="Pulp Fiction", img="img/toy.jpg", class="js-item", canDelete=true)}}
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+

@@ -1,0 +1,38 @@
+.s-form
+	position: relative
+	&__input
+		height: 44px
+		border-radius: 4px
+		width: 100%
+		background: #0f181d
+		padding: 5px 55px
+		+pop
+		font-size: 14px
+		color: #fff
+		caret-color: $c-blue
+		&:placeholder
+			color: rgba(#fff, .6)
+	&__icon
+		position: absolute
+		top: 50%
+		left: 28px
+		margin-top: -8px
+		font-size: 0
+		opacity: .6
+		.icon
+			font-size: 16px
+	.icon
+		fill: #fff
+	&__close
+		position: absolute
+		right: 20px
+		top: 0
+		bottom: 0
+		font-size: 0
+		background: none
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 30px
+		.icon
+			font-size: 16px

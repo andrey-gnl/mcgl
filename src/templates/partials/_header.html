@@ -1,0 +1,96 @@
+
+<header class="header js-header {% if hero == true %}header_abs{% endif %} {% if demand or mimc %}header_submenu{% endif %}">
+  <div class="container">
+    <div class="header__inner">
+      <div class="header__form js-search-form">
+        <form class="s-form">
+          <div class="s-form__icon">{{mixins.icon('search')}}</div>
+          <input class="s-form__input" type="text" placeholder="Buscar...">
+          <button class="s-form__close js-search-close" type="button">{{mixins.icon('close')}}</button>
+        </form>
+      </div>
+      <div class="header__logo">
+        <a href="#"><img src="img/logo.svg" alt="McGoLive"></a>
+      </div>
+      <div class="header__nav">
+        <ul class="nav">
+          {% if demand == true%}
+            <li><a href="#" class="nav__link">EN VIVO</a></li>
+            <li>
+              <a href="#" class="nav__link is-active">ON DEMAND</a>
+              <ul>
+                <li><a href="#" class="nav__link {% if not category %}is-active{%endif%}">Destacados</a></li>
+                <li class="nav__drop-parent">
+                  {% if category %}
+                  <span class="nav__link nav__link_span is-active">{{category}} {{mixins.icon('chevron')}}</span>
+                  {% else %}
+                  <span class="nav__link nav__link_span">Categories {{mixins.icon('chevron')}}</span>
+                  {% endif %}
+                  <div class="nav__drop">
+                    <div class="menu menu_inner">
+                      <div class="menu__arr"></div>
+                      <ul class="menu__list">
+                        <li><a href="#">Películas</a></li>
+                        <li><a href="#">Series</a></li>
+                        <li><a href="#">Deportes</a></li>
+                        <li><a href="#">Infantiles</a></li>
+                        <li><a href="#">Culturales</a></li>
+                        <li class="menu__link-big"><a href="#">Plataformas Play</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#" class="nav__link">MI MC</a></li>
+          {% elif mimc %}
+          <li><a href="#" class="nav__link" class="nav__link">EN VIVO</a></li>
+          <li><a href="#" class="nav__link">ON DEMAND</a></li>
+          <li>
+            <a href="#" class="nav__link is-active">MI MC</a>
+            <ul>
+              {% set mimcItems = ['Mis Alquileres', 'Mis Favoritos', 'Mis Grabaciones', 'Mis Recordatorios'] %}
+              {% for link in mimcItems %}
+              <li><a href="#" class="nav__link {%if loop.index == activeMimc%}is-active{%endif%}">{{link}}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% else %}
+            <li><a href="#" class="nav__link is-active">EN VIVO</a></li>
+            <li><a href="#" class="nav__link">ON DEMAND</a></li>
+            <li><a href="#" class="nav__link">MI MC</a></li>
+          {%endif%}
+        </ul>
+      </div>
+      <div class="header__controls">
+        <div class="header__search">
+          <div class="header__search-btn js-search-btn" role="button">
+            {{mixins.icon('search')}}
+          </div>
+        </div>
+        <div class="header__user">
+          <div class="user">
+            <span class="user__btn js-user-btn" role="button">
+              <span class="user__pic">
+                {{mixins.icon('ava')}}
+              </span>
+              {{mixins.icon('chevron')}}
+            </span>
+            <div class="user__menu js-user-menu">
+              <div class="menu">
+                <i class="menu__arr"></i>
+                <ul class="menu__list">
+                  <li><a href="#">Cuenta</a></li>
+                  <li><a href="#">Gestionar Dispositivos</a></li>
+                  <li><a href="#">Gestionar Perfiles</a></li>
+                  <li><a href="#">Control Parental</a></li>
+                  <li class="menu__link-big"><a href="#">Cerrar Sesión</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

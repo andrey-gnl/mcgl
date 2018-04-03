@@ -1,0 +1,37 @@
+.gallery
+	$this: &
+
+	position: relative
+	padding-right: 80px
+	&__item
+		height: 320px
+		background: center no-repeat / cover
+	&__slider-main
+		&:not(.slick-initialized)
+			.slick-slide, .gallery__item
+				&:not(:first-child)
+					display: none
+	&__slider
+		position: relative
+		font-size: 0
+		border-radius: 5px
+		overflow: hidden
+
+		&:hover
+			#{$this}__play
+				opacity: 1
+				visibility: visible
+		.slick-vertical .slick-slide
+			border: 0
+	&__controls
+		position: absolute
+		top: 0
+		right: 0
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+	&__arr
+		&:not(:last-child)
+			margin-bottom: 60px

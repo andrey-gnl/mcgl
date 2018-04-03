@@ -1,0 +1,34 @@
+---
+title: 007-MCGL-OnDemand-DetalledeSerie-SinCargo
+
+---
+{% extends "layouts/_layout.html" %}
+{% block content %}
+
+  {{mixins.breadcrumbs(['Series'])}}
+
+  <section class="section">
+    <div class="container">
+      {{mixins.movie()}}
+    </div>
+  </section>
+  <section class="section section_sm">
+    <div class="container">
+      <div class="section__title title">
+        <h3 class="h3">Episodios por Temporada</h3>
+      </div>
+      <div class="section__settings">
+        {{mixins.select(false, ['Temporada 7', 'Item 2', 'Item 3'])}}
+      </div>
+      <div class="section__body">
+        <div class="row row_lg">
+          {% for item in range(0,7)%}
+          <div class="col-4">
+            {{mixins.item('T7 / E6 - Más allá del muro', 'img/got2.jpg')}}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

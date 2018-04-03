@@ -1,0 +1,70 @@
+.nav
+	$this: &
+
+	> li
+		display: inline-block
+		vertical-align: top
+		&:not(:last-child)
+			margin-right: 40px
+		> ul
+			position: absolute
+			top: 100%
+			margin-top: 30px
+			width: auto
+			> li
+				display: inline-block
+				vertical-align: top
+				position: relative
+				&:not(:last-child)
+					margin-right: 40px
+	&__link
+		position: relative
+		display: block
+		padding-bottom: 22px
+		color: #fff
+		font-size: 14px
+		letter-spacing: .06em
+		opacity: .6
+		transition: opacity .3s ease
+		cursor: pointer
+		.icon-chevron
+			fill: #fff
+			font-size: 4px
+			display: inline-block
+			vertical-align: middle
+			margin-left: 7px
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 20px
+			height: 2px
+			background: #fff
+			opacity: 0
+			transition: opacity .3s ease
+		&.is-active, &:hover
+			opacity: 1
+			&:after
+				opacity: 1
+	&__link_span
+		&:hover:not(.is-active)
+			&:after
+				display: none
+	&__drop-parent
+		&:hover
+			#{$this}__drop
+				opacity: 1
+				visibility: visible
+				transform: translateY(0)
+	&__drop
+		position: absolute
+		z-index: 2
+		top: 100%
+		left: 0
+		opacity: 0
+		visibility: hidden
+		transform: translateY(10px)
+		transition: opacity .3s, visibility .3s, transform .3s
+
+

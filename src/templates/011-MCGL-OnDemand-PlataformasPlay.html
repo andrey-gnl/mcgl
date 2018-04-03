@@ -1,0 +1,29 @@
+---
+title: 011-MCGL-OnDemand-PlataformasPlay
+demand: true
+category: 'Plataformas Play'
+---
+{% extends "layouts/_layout.html" %}
+{% block content %}
+
+  <section class="section section_md">
+    <div class="container">
+      <div class="section__title">
+        <h2 class="h2">Plataformas Play</h2>
+        {{mixins.select(false, ['Todos las Platformas', 'Item 1', 'Item 2', 'Item 3'])}}
+      </div>
+      <div class="section__body">
+        <div class="row">
+          {% set blocks = ['HBO GO', 'ESPN PLAY', 'CINEMAX GO', 'TNT GO', 'SPACE GO', 'CN GO', 'SONY PLAY', 'AXN', 'FOX', 'STUDIO UNIVERSAL', 'DISCOVERY KIDS ESP'] %}
+
+          {% for item in blocks %}
+          <div class="col-4">
+            {{mixins.cItem(title=item)}}
+          </div>
+          {% endfor%}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+

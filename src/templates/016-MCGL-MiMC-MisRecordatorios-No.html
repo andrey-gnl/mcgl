@@ -1,0 +1,25 @@
+---
+title: 016-MCGL-MiMC-MisRecordatorios-No
+mimc: true
+activeMimc: 1
+---
+{% extends "layouts/_layout.html" %}
+{% block content %}
+
+  <section class="section section_lg">
+    <div class="container">
+      <div class="section__title">
+        <h2 class="h2">MIS RECORDATORIOS AGENDADOS</h2>
+        {{mixins.select(false, ['Todas las Categorias', 'Item 1', 'Item 2', 'Item 3'])}}
+      </div>
+      <div class="section__body">
+        <div class="section__empty">
+          <div class="empty">
+            <div class="empty__icon">{{mixins.icon('sad')}}</div>
+            <div class="empty__text">No tienes recordatorios agendados.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

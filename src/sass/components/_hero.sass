@@ -1,0 +1,109 @@
+.hero
+	+pop
+	&__controls
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 680px
+		min-width: 1280px
+		+rmin(1600)
+			height: 850px
+		> .container
+			height: 100%
+	&__slider
+		&:not(.slick-initialized)
+			.slick-slide, .hero__slide
+				&:not(:first-child)
+					display: none
+	.slick-arrow
+		position: absolute
+		top: 50%
+		margin-top: -17px
+		font-size: 0
+		z-index: 3
+	.slick-prev
+		left: 2px
+	.slick-next
+		right: 2px
+	.slick-dots
+		position: absolute
+		bottom: 30px
+		right: 0
+		left: 0
+		max-width: 1230px
+		padding: 0 15px
+		margin: 0 auto
+		text-align: right
+		li
+			display: inline-block
+			&:not(:first-child)
+				margin-left: 13px
+			&.slick-active
+				button
+					opacity: 1
+					transform: scale(1)
+		button
+			font-size: 0
+			width: 12px
+			height: 12px
+			border-radius: 50%
+			background: #fff
+			opacity: .6
+			transform: scale(.9)
+			transition: transform .3s, opacity .3s
+	&__slide
+		position: relative
+		height: 680px
+		background-size: cover
+		z-index: 1
+		padding-top: 65px
+		+rmin(1600)
+			height: 850px
+			padding-top: 150px
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: rgba(#000, .5)
+			z-index: 1
+	&__info
+		position: relative
+		z-index: 2
+		padding-top: 160px
+		padding-left: 97px
+	&__type
+		position: relative
+		padding-bottom: 9px
+		margin-bottom: 9px
+		text-transform: uppercase
+		+pop
+		font-weight: 600
+		font-size: 16px
+		letter-spacing: 0.2em
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			height: 2px
+			width: 20px
+			background: #fff
+	&__name
+		margin-bottom: 1px
+		+med
+		font-size: 60px
+		line-height: 1
+	&__description
+		max-width: 377px
+		margin-bottom: 26px
+		font-size: 16px
+		line-height: 1.5
+	&__buttons
+		.button
+			&:not(:last-child)
+				margin-right: 30px
+

@@ -1,0 +1,36 @@
+.select
+	position: relative
+	display: inline-block
+	text-align: left
+	min-width: 172px
+	& + .select
+		margin-left: 30px
+	&:after
+		content: ''
+		position: absolute
+		right: 10px
+		bottom: 14px
+		width: 6px
+		height: 10px
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIxMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNiAzSDBsMy0zIDMgM3ptLS4xIDRMMyA5LjkuMSA3aDUuOHoiIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==)
+		background-size: contain
+		pointer-events: none
+	select
+		width: 100%
+		padding-right: 25px
+		padding-bottom: 5px
+		border-radius: 0
+		border: 0
+		border-bottom: 1px solid #fff
+		background: none
+		color: #fff
+		+pop
+		font-size: 16px
+		cursor: pointer
+		appearance: none
+	&__title
+		margin-bottom: 7px
+		text-transform: uppercase
+		+pop
+		font-weight: 300
+		color: #898f92

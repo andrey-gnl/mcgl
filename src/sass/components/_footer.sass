@@ -1,0 +1,41 @@
+.footer
+	position: relative
+	background: #000
+	padding: 25px 0
+	&__left
+		float: left
+	&__right
+		float: right
+		padding-top: 2px
+	&__center
+		padding: 0 170px 0 100px
+	&__info
+		display: flex
+		justify-content: center
+		align-items: center
+	&__text
+		margin-right: 40px
+		color: #949494
+		font-size: 11px
+		text-align: right
+		+pop
+		a
+			color: #fff
+			&:hover
+				text-decoration: underline
+		a[href^=tel]
+			color: inherit
+		p
+			margin-bottom: 5px
+	&__list
+		text-align: right
+		li
+			&:not(:last-child)
+				&:after
+					content: ' - '
+		a
+			color: #fff
+			&:hover
+				text-decoration: underline
+		li
+			display: inline-block
