@@ -1,0 +1,48 @@
+---
+noHeader: true
+login: true
+---
+{% extends "layouts/_layout.html" %}
+{% block content %}
+  <div class="login">
+    <div class="login__col login__col_form">
+      <div class="login__container">
+        <div class="login__top">
+          <div class="login__logo"><a href="#"><img src="img/logo.svg" alt="McGoLive"></a></div>
+          <div class="login__btn"><button class="btn-close">{{mixins.icon('close-x')}}</button></div>
+        </div>
+        <form class="login__form">
+          <div class="form-title">INICIA SESIÓN</div>
+          <div class="form-field">
+            <div class="input">
+              <input type="text" class="input__main js-input">
+              <div class="input__placeholder">Email</div>
+            </div>
+          </div>
+          <div class="form-field">
+            <div class="input">
+              <input type="text" class="input__main js-input">
+              <div class="input__placeholder">Email</div>
+            </div>
+          </div>
+          <div class="form-field">
+            <label class="checkbox">
+              <input type="checkbox">
+              <span class="checkbox__text">Recordame</span>
+            </label>
+          </div>
+          <div class="form-btn">
+            <button class="button button_full button_red">INICIAR SESIÓN</button>
+          </div>
+          <div class="form-message">
+            <a href="#" class="link">OLVIDÉ MI CONTRASEÑA</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="login__col">
+      <div class="login__img" style="background-image: url('img/hero.jpg')"></div>
+    </div>
+  </div>
+{% endblock %}
+

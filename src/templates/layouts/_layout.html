@@ -14,8 +14,10 @@
 
     <!-- BEGIN content -->
     <div class="page">
-      <div class="out">
+      <div class="out  {% if login %}is-login{% endif %}">
+        {% if not noHeader %}
         {% include "partials/_header.html" %}
+        {% endif %}
         {% block content %}{% endblock %}
       </div>
       {% include "partials/_footer.html" %}
