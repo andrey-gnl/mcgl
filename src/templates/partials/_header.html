@@ -1,11 +1,12 @@
 
-<header class="header js-header {% if hero == true %}header_abs{% endif %} {% if demand or mimc %}header_submenu{% endif %}">
+<header class="header js-header {% if hero == true %}header_abs{% endif %} {% if demand or mimc %}header_submenu{% endif %} {% if searchActive %}is-search-open{% endif %}">
   <div class="container">
     <div class="header__inner">
-      <div class="header__form js-search-form">
+      <div class="header__form js-search-form {% if searchActive %}is-open{% endif %}">
         <form class="s-form">
           <div class="s-form__icon">{{mixins.icon('search')}}</div>
-          <input class="s-form__input" type="text" placeholder="Buscar...">
+          <input class="s-form__input" type="text" placeholder="Buscar..."
+          {% if searchActive %}value="Game of Thrones"{% endif %}>
           <button class="s-form__close js-search-close" type="button">{{mixins.icon('close')}}</button>
         </form>
       </div>
