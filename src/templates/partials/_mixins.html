@@ -2,13 +2,24 @@
 <svg class="icon icon-{{i}} {{class}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
 {% endmacro %}
 
-{% macro btnIcon(iconName, text, circle=false, class="") %}
+{% macro btnIcon(iconName, text, circle=false, class="", checkbox=false) %}
+{% if checkbox %}
+<label class="btn {% if circle%}btn_circle{%endif%} {{class}}">
+{% else %}
 <button class="btn {% if circle%}btn_circle{%endif%} {{class}}">
+{% endif %}
+  {% if checkbox%}
+  <input type="checkbox" class="btn__checkbox">
+  {%endif%}
   <div class="btn__icon">{{icon(iconName)}}</div>
   {% if text %}
   <div class="btn__text">{{text | safe}}</div>
   {% endif %}
+{% if checkbox %}
+</label>
+{% else %}
 </button>
+{% endif %}
 {% endmacro %}
 
 {% macro progress(showTime=true, num=65) %}
@@ -146,16 +157,6 @@
             frente a frente, Lagertha trata por última vez de alcanzar la paz con Ivar. Floki propone la construcción de
             un templo que enfrentará a los nuevos colonos y Alfred tiene interesantes…Con los ejércitos frente a frente,
             Lagertha trata por última vez de alcanzar la paz con Ivar. Floki propone la construcción de un templo que enfrentará.
-            Con los ejércitos frente a frente, Lagertha trata por última vez de alcanzar la paz con Ivar. Floki propone la construcción
-            de un templo que enfrentará a los nuevos colonos y Alfred tiene interesante interesanteinteresante Con los ejércitos
-            frente a frente, Lagertha trata por última vez de alcanzar la paz con Ivar. Floki propone la construcción de
-            un templo que enfrentará a los nuevos colonos y Alfred tiene interesantes…Con los ejércitos frente a frente,
-            Lagertha trata por última vez de alcanzar la paz con Ivar. Floki propone la construcción de un templo que enfrentará.
-            Con los ejércitos frente a frente, Lagertha trata por última vez de alcanzar la paz con Ivar. Floki propone la construcción
-            de un templo que enfrentará a los nuevos colonos y Alfred tiene interesante interesanteinteresante Con los ejércitos
-            frente a frente, Lagertha trata por última vez de alcanzar la paz con Ivar. Floki propone la construcción de
-            un templo que enfrentará a los nuevos colonos y Alfred tiene interesantes…Con los ejércitos frente a frente,
-            Lagertha trata por última vez de alcanzar la paz con Ivar. Floki propone la construcción de un templo que enfrentará.
           </p>
         </div>
         <button class="info__more js-ellipsis-toggle"></button>
@@ -171,7 +172,7 @@
         {% endif %}
 
         {% if favourite %}
-          {{btnIcon('heart', class='is-selected')}}
+          {{btnIcon('heart', checkbox=true)}}
         {% else %}
           {{btnIcon('heart')}}
         {% endif %}
