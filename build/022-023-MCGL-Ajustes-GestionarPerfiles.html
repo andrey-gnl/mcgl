@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>020-021-MCGL-Ajustes-GestionarDispositivos</title>
+    <title>022-023-MCGL-Ajustes-GestionarPerfiles.html</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=1280, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
@@ -63,8 +63,8 @@
           <div class="container">
             <ul class="nav">
               <li><a href="#" class="nav__link ">Cuenta</a></li>
-              <li><a href="#" class="nav__link is-active">Gestionar Dispositiv</a></li>
-              <li><a href="#" class="nav__link ">Gestionar Perfiles</a></li>
+              <li><a href="#" class="nav__link ">Gestionar Dispositiv</a></li>
+              <li><a href="#" class="nav__link is-active">Gestionar Perfiles</a></li>
               <li><a href="#" class="nav__link ">Control Parental</a></li>
             </ul>
           </div>
@@ -73,72 +73,64 @@
           <div class="container">
             <div class="section__title">
               <div class="section__title-more">
-                <h2 class="h2">GESTIONAR DISPOSITIVOS (4 ACTIVOS)</h2>
+                <h2 class="h2">GESTIONAR PERFILES (1 EXISTENTE)</h2>
                 <div class="section__meta">
                   <div class="meta">*Puedes contar con hasta 10 dispositivos activos.</div>
                 </div>
-              </div>
-            </div>
-            <div class="section__body js-items">
+              </div> <a href="#" class="button">AGREGAR PERFIL</a> </div>
+            <div class="section__body js-profiles">
               <div class="table">
                 <div class="table__header">
                   <div class="table__row">
-                    <div class="table__cell table__id">ID DISPOSITIVO</div>
-                    <div class="table__cell table__type">TIPO DE DISPOSITIVO</div>
-                    <div class="table__cell table__start">INICIO</div>
-                    <div class="table__cell table__end">ÚLTIMA ACTIVIDAD</div>
+                    <div class="table__cell table__profile">Perfil</div>
+                    <div class="table__cell table__name">Nombre</div>
+                    <div class="table__cell table__control">Control Parental</div>
                     <div class="table__cell table__edit">
                       <div class="change js-change">
-                        <div class="change__edit"> <a href="#" class="link js-change-edit">
+                        <div class="change__edit"> <a href="#" class="link js-change-edit-profiles">
 <svg class="icon icon-pencil "><use xlink:href="img/sprite.svg#icon-pencil"></use></svg>
  <span>Editar</span></a> </div>
-                        <div class="change__final"> <a href="#" class="link js-edit-cancel">
+                        <div class="change__final"> <a href="#" class="link js-edit-cancel-profiles">
 <svg class="icon icon-close "><use xlink:href="img/sprite.svg#icon-close"></use></svg>
- <span>Cancelar</span></a> <a href="#" class="link is-active js-edit-save">
+ <span>Cancelar</span></a> <a href="#" class="link is-active js-edit-save-profiles">
 <svg class="icon icon-done "><use xlink:href="img/sprite.svg#icon-done"></use></svg>
  <span>Guardar</span></a> </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="table__body">
-                  <div class="table__row js-item">
-                    <div class="table__cell table__id">192874</div>
-                    <div class="table__cell table__type">Mac OS 12.12.5</div>
-                    <div class="table__cell table__start">30/07/2017</div>
-                    <div class="table__cell table__end">22/02/2018</div>
+                <form class="table__body js-form-edit-profile">
+                  <div class="table__row js-edit-profile">
+                    <div class="table__cell table__profile"> <svg class="icon icon-ava "><use xlink:href="img/sprite.svg#icon-ava"></use></svg> </div>
+                    <div class="table__cell table__name">
+                      <div class="input input_lg input_simple"> <input type="text" class="input__main js-input  js-edit-profile-input is-filled" value="Marcela" readonly>
+                        <div class="input__placeholder"></div>
+                      </div>
+                    </div>
+                    <div class="table__cell table__control"> <label class="c-checkbox">
+                <input type="checkbox" checked>
+                <span><i></i></span>
+              </label> </div>
                     <div class="table__cell table__edit"><a href="#" class="link">
 <svg class="icon icon-delete "><use xlink:href="img/sprite.svg#icon-delete"></use></svg>
- DESACTIVAR</a></div>
+ ELIMINAR</a></div>
                   </div>
-                  <div class="table__row js-item">
-                    <div class="table__cell table__id">192874</div>
-                    <div class="table__cell table__type">Mac OS 12.12.5</div>
-                    <div class="table__cell table__start">30/07/2017</div>
-                    <div class="table__cell table__end">22/02/2018</div>
+                  <div class="table__row js-edit-profile">
+                    <div class="table__cell table__profile"> <svg class="icon icon-ava "><use xlink:href="img/sprite.svg#icon-ava"></use></svg> </div>
+                    <div class="table__cell table__name">
+                      <div class="input input_lg input_simple"> <input type="text" class="input__main js-input  js-edit-profile-input is-filled" value="Marcela" readonly>
+                        <div class="input__placeholder"></div>
+                      </div>
+                    </div>
+                    <div class="table__cell table__control"> <label class="c-checkbox">
+                <input type="checkbox" >
+                <span><i></i></span>
+              </label> </div>
                     <div class="table__cell table__edit"><a href="#" class="link">
 <svg class="icon icon-delete "><use xlink:href="img/sprite.svg#icon-delete"></use></svg>
- DESACTIVAR</a></div>
+ ELIMINAR</a></div>
                   </div>
-                  <div class="table__row js-item">
-                    <div class="table__cell table__id">192874</div>
-                    <div class="table__cell table__type">Mac OS 12.12.5</div>
-                    <div class="table__cell table__start">30/07/2017</div>
-                    <div class="table__cell table__end">22/02/2018</div>
-                    <div class="table__cell table__edit"><a href="#" class="link">
-<svg class="icon icon-delete "><use xlink:href="img/sprite.svg#icon-delete"></use></svg>
- DESACTIVAR</a></div>
-                  </div>
-                  <div class="table__row js-item">
-                    <div class="table__cell table__id">192874</div>
-                    <div class="table__cell table__type">Mac OS 12.12.5</div>
-                    <div class="table__cell table__start">30/07/2017</div>
-                    <div class="table__cell table__end">22/02/2018</div>
-                    <div class="table__cell table__edit"><a href="#" class="link">
-<svg class="icon icon-delete "><use xlink:href="img/sprite.svg#icon-delete"></use></svg>
- DESACTIVAR</a></div>
-                  </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>

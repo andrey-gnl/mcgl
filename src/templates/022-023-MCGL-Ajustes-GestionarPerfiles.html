@@ -1,0 +1,62 @@
+---
+title: 022-023-MCGL-Ajustes-GestionarPerfiles.html
+---
+{% extends "layouts/_layout.html" %}
+{% block content %}
+{{mixins.subNav(active=3)}}
+
+<div class="section section_lg">
+  <div class="container">
+    <div class="section__title">
+      <div class="section__title-more">
+        <h2 class="h2">GESTIONAR PERFILES (1 EXISTENTE)</h2>
+        <div class="section__meta">
+          <div class="meta">*Puedes contar con hasta 10 dispositivos activos.</div>
+        </div>
+      </div>
+      <a href="#" class="button">AGREGAR PERFIL</a>
+    </div>
+    <div class="section__body js-profiles">
+      <div class="table">
+        <div class="table__header">
+          <div class="table__row">
+            <div class="table__cell table__profile">Perfil</div>
+            <div class="table__cell table__name">Nombre</div>
+            <div class="table__cell table__control">Control Parental</div>
+            <div class="table__cell table__edit">
+              <div class="change js-change">
+                <div class="change__edit">
+                  <a href="#" class="link js-change-edit-profiles">{{mixins.icon('pencil')}} <span>Editar</span></a>
+                </div>
+                <div class="change__final">
+                  <a href="#" class="link js-edit-cancel-profiles">{{mixins.icon('close')}} <span>Cancelar</span></a>
+                  <a href="#" class="link is-active js-edit-save-profiles">{{mixins.icon('done')}} <span>Guardar</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="table__body js-form-edit-profile">
+
+          {% for item in range(0, 2) %}
+          <div class="table__row js-edit-profile">
+            <div class="table__cell table__profile">{{mixins.icon('ava')}}</div>
+            <div class="table__cell table__name">
+              {{mixins.input(value="Marcela", readonly=true, class="input_lg input_simple", classInput=" js-edit-profile-input")}}
+            </div>
+            <div class="table__cell table__control">
+              <label class="c-checkbox">
+                <input type="checkbox" {%if loop.index == 1%}checked{%endif%}>
+                <span><i></i></span>
+              </label>
+            </div>
+            <div class="table__cell table__edit"><a href="#" class="link">{{mixins.icon('delete')}} ELIMINAR</a></div>
+          </div>
+          {% endfor %}
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

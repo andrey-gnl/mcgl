@@ -74,6 +74,10 @@
 		pointer-events: none
 		transition: transform .3s
 
+.input_lg
+	.input__main
+		font-size: 16px
+
 .input_mod
 	.input
 		&__main
@@ -81,9 +85,15 @@
 		&__placeholder
 			bottom: 9px
 
+.input_simple
+	padding-top: 0
+	.input
+		&__main
+			padding-bottom: 0
+			height: 60px
 
 .checkbox
-	display: inline
+	display: inline-block
 	vertical-align: top
 	cursor: pointer
 	user-select: none
@@ -123,6 +133,42 @@
 			z-index: 2
 			opacity: 0
 			transition: opacity .2s
+
+.c-checkbox
+	display: inline-block
+	vertical-align: top
+	cursor: pointer
+	input
+		position: absolute
+		visibility: hidden
+		opacity: 0
+		&:checked
+			~ span
+				background: $c-blue
+				border-color: $c-blue
+				i
+					transform: translateX(20px)
+	span
+		position: relative
+		display: inline-block
+		vertical-align: top
+		width: 42px
+		height: 22px
+		border: 1px solid #E5E5E5
+		background: #000
+		border-radius: 18px
+		transition: background .3s, border .3s
+		i
+			position: absolute
+			width: 20px
+			height: 20px
+			top: 0px
+			left: 0px
+			background: #fff
+			box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10), 0 2px 2px 0 rgba(0,0,0,0.30)
+			border-radius: 50%
+			transition: transform .3s
+
 
 
 

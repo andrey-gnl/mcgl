@@ -56,3 +56,48 @@ $('.js-edit-cancel-input').on('click', function(e) {
 
   e.preventDefault();
 });
+
+// js edit inputs
+$('.js-change-edit-profiles').on('click', function(e) {
+  const target = $(this);
+  const parentAll = target.closest('.js-profiles');
+  const inputs = parentAll.find('.js-edit-profile-input');
+  const profile = parentAll.find('.js-edit-profile');
+  const parent = target.closest('.js-change');
+
+  profile.addClass('is-removable');
+  inputs.removeAttr('readonly');
+  parent.addClass('is-active');
+
+  e.preventDefault();
+});
+
+$('.js-edit-save-profiles').on('click', function(e) {
+  const target = $(this);
+  const parentAll = target.closest('.js-profiles');
+  const inputs = parentAll.find('.js-edit-profile-input');
+  const profile = parentAll.find('.js-edit-profile');
+  const parent = target.closest('.js-change');
+
+  inputs.attr('readonly', true);
+  profile.removeClass('is-removable');
+  parent.removeClass('is-active');
+
+  e.preventDefault();
+});
+
+$('.js-edit-cancel-profiles').on('click', function(e) {
+  const target = $(this);
+  const parentAll = target.closest('.js-profiles');
+  const inputs = parentAll.find('.js-edit-profile-input');
+  const form = parentAll.find('.js-form-edit-profile');
+  const profile = parentAll.find('.js-edit-profile');
+  const parent = target.closest('.js-change');
+
+  form.get(0).reset();
+  inputs.attr('readonly', true);
+  profile.removeClass('is-removable');
+  parent.removeClass('is-active');
+
+  e.preventDefault();
+});
