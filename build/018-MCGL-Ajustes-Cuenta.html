@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>012-MCGL-MiMC-Misalquileres</title>
+    <title>018-MCGL-Ajustes-Cuenta</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=1280, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
@@ -14,7 +14,7 @@
     <!-- BEGIN content -->
     <div class="page">
       <div class="out  ">
-        <header class="header js-header  header_submenu ">
+        <header class="header js-header   ">
           <div class="container">
             <div class="header__inner">
               <div class="header__form js-search-form ">
@@ -26,16 +26,9 @@
               <div class="header__logo"> <a href="#"><img src="img/logo.svg" alt="McGoLive"></a> </div>
               <div class="header__nav">
                 <ul class="nav">
-                  <li><a href="#" class="nav__link" class="nav__link">EN VIVO</a></li>
+                  <li><a href="#" class="nav__link is-active">EN VIVO</a></li>
                   <li><a href="#" class="nav__link">ON DEMAND</a></li>
-                  <li> <a href="#" class="nav__link is-active">MI MC</a>
-                    <ul>
-                      <li><a href="#" class="nav__link is-active">Mis Alquileres</a></li>
-                      <li><a href="#" class="nav__link ">Mis Favoritos</a></li>
-                      <li><a href="#" class="nav__link ">Mis Grabaciones</a></li>
-                      <li><a href="#" class="nav__link ">Mis Recordatorios</a></li>
-                    </ul>
-                  </li>
+                  <li><a href="#" class="nav__link">MI MC</a></li>
                 </ul>
               </div>
               <div class="header__controls">
@@ -66,95 +59,85 @@
             </div>
           </div>
         </header>
-        <section class="section section_lg">
+        <div class="subnav">
+          <div class="container">
+            <ul class="nav">
+              <li><a href="#" class="nav__link is-active">Cuenta</a></li>
+              <li><a href="#" class="nav__link ">Gestionar Dispositiv</a></li>
+              <li><a href="#" class="nav__link ">Gestionar Perfiles</a></li>
+              <li><a href="#" class="nav__link ">Control Parental</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="section section_lg">
           <div class="container">
             <div class="section__title">
-              <h2 class="h2">MIS ALQUILERES</h2>
-              <div class="select"> <select class="select">
-    
-    <option value="Todas las Categorias">Todas las Categorias</option>
-    
-    <option value="Item 1">Item 1</option>
-    
-    <option value="Item 2">Item 2</option>
-    
-    <option value="Item 3">Item 3</option>
-    
-  </select> </div>
+              <h2 class="h2">Cuenta</h2>
             </div>
             <div class="section__body">
-              <div class="chapter">
+              <div class="chapter chapter_sm js-edit">
                 <div class="chapter__title title">
-                  <h3 class="h3">Películas</h3>
-                </div>
-                <div class="chapter__gallery">
-                  <div class="row row_mb row_inline">
-                    <div class="col-4">
-                      <div class="item  ">
-                        <div class="item__top">
-                          <a href="#" class="item__img" style="background-image: url('img/toy.jpg');">
-                            <div class="item__play play"></div>
-                          </a>
-                        </div> <a href="#" class="item__name">
-    <span>Tory story 3</span>
-  </a>
-                        <div class="item__info">
-                          <div class="item__text">
-                            <p>Disponible hasta:</p> <strong>Jue 30/01 - 15:45 hs.</strong>
-                            <p>Alquiler: 28/01/18 - 15:45</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-4">
-                      <div class="item  ">
-                        <div class="item__top">
-                          <a href="#" class="item__img" style="background-image: url('img/toy.jpg');">
-                            <div class="item__play play"></div>
-                          </a>
-                        </div> <a href="#" class="item__name">
-    <span>Pulp Fiction</span>
-  </a>
-                        <div class="item__info">
-                          <div class="item__text">
-                            <p>Este alquiler ha finalizado.</p>
-                            <p>Alquiler: 22/01/18 - 15:45</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <h3 class="h3">Datos Cliente</h3>
+                  <div class="chapter__change change js-change">
+                    <div class="change__edit"> <a href="#" class="link js-change-input">
+<svg class="icon icon-pencil "><use xlink:href="img/sprite.svg#icon-pencil"></use></svg>
+ <span>Editar</span></a> </div>
+                    <div class="change__final"> <a href="#" class="link js-edit-cancel-input">
+<svg class="icon icon-close "><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+ <span>Cancelar</span></a> <a href="#" class="link is-active js-edit-save-input">
+<svg class="icon icon-done "><use xlink:href="img/sprite.svg#icon-done"></use></svg>
+ <span>Guardar</span></a> </div>
                   </div>
+                </div>
+                <div class="chapter__body">
+                  <form action="" class="form-sm js-form-edit">
+                    <div class="form-field-sm">
+                      <div class="input input_mod"> <input type="text" class="input__main js-input js-edit-input is-filled" value="NOMBRE Y APELLIDO" readonly>
+                        <div class="input__placeholder">CONTRASEÑA</div>
+                      </div>
+                    </div>
+                    <div class="form-field-sm">
+                      <div class="input input_mod"> <input type="text" class="input__main js-input js-edit-input is-filled" value="123456" readonly>
+                        <div class="input__placeholder">CLIENTE</div>
+                      </div>
+                    </div>
+                    <div class="form-field-sm">
+                      <div class="input input_mod"> <input type="text" class="input__main js-input js-edit-input is-filled" value="3.456.765-9" readonly>
+                        <div class="input__placeholder">CI / RUT</div>
+                      </div>
+                    </div>
+                    <div class="form-field-sm">
+                      <div class="input input_mod"> <input type="email" class="input__main js-input js-edit-input is-filled" value="sonia@mail.com" readonly>
+                        <div class="input__placeholder">Email</div>
+                      </div>
+                    </div>
+                    <div class="form-field-sm">
+                      <div class="input input_mod"> <input type="password" class="input__main js-input js-edit-input is-filled" value="password" readonly>
+                        <div class="input__placeholder">CONTRASEÑA</div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
-              <div class="chapter">
+              <div class="chapter chapter_sm">
                 <div class="chapter__title title">
-                  <h3 class="h3">Culturales</h3>
+                  <h3 class="h3">Producto MC Contratado</h3>
                 </div>
-                <div class="chapter__gallery">
-                  <div class="row row_mb row_inline">
-                    <div class="col-4">
-                      <div class="item  ">
-                        <div class="item__top">
-                          <a href="#" class="item__img" style="background-image: url('img/toy.jpg');">
-                            <div class="item__play play"></div>
-                          </a>
-                        </div> <a href="#" class="item__name">
-    <span>George Harrison: Living in a Material World</span>
-  </a>
-                        <div class="item__info">
-                          <div class="item__text">
-                            <p>Este alquiler ha finalizado.</p>
-                            <p>Alquiler: 22/01/18 - 15:45</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="chapter__body">
+                  <dl class="list"> <dt class="list__title">Plan MC</dt>
+                    <dd class="list__info">
+                      <div class="list__item">MC HOGAR</div>
+                    </dd> <dt class="list__title">Paquetes Premium</dt>
+                    <dd>
+                      <div class="list__item">Pack HD</div>
+                      <div class="list__item">Fútbol UY HD</div>
+                    </dd>
+                  </dl>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </div>
       <footer class="footer">
         <div class="container">

@@ -13,10 +13,10 @@ activeMimc: 3
         {{mixins.select(false, ['Todas las Categorias', 'Item 1', 'Item 2', 'Item 3'])}}
       </div>
       <div class="section__body">
-        <div class="items js-items">
-          <div class="items__title title">
+        <div class="chapter js-items">
+          <div class="chapter__title title">
             <h3 class="h3">Películas</h3>
-            <div class="items__change change js-change">
+            <div class="chapter__change change js-change">
               <div class="change__edit">
                 <a href="#" class="link js-change-edit">{{mixins.icon('pencil')}} <span>Editar</span></a>
               </div>
@@ -26,7 +26,7 @@ activeMimc: 3
               </div>
             </div>
           </div>
-          <div class="items__gallery">
+          <div class="chapter__gallery">
             <div class="row row_mb row_inline">
               <div class="col-4">
                 {{mixins.item(name="Logan", img="img/lalaland.jpg", class="js-item", canDelete=true)}}
@@ -34,10 +34,10 @@ activeMimc: 3
             </div>
           </div>
         </div>
-        <div class="items js-items">
-            <div class="items__title title">
+        <div class="chapter js-items">
+            <div class="chapter__title title">
               <h3 class="h3">Culturales</h3>
-              <div class="items__change change js-change">
+              <div class="chapter__change change js-change">
                 <div class="change__edit">
                   <a href="#" class="link js-change-edit">{{mixins.icon('pencil')}} <span>Editar</span></a>
                 </div>
@@ -47,7 +47,7 @@ activeMimc: 3
                 </div>
               </div>
             </div>
-            <div class="items__gallery">
+            <div class="chapter__gallery">
               <div class="row row_mb row_inline">
                 <div class="col-4">
                   {{mixins.item(name="T7 / E3 - La justicia de la reina", img="img/got2.jpg", class="js-item", canDelete=true)}}

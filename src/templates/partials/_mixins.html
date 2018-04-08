@@ -87,8 +87,6 @@
     {%endif%}
   </div>
 
-
-
   <a href="#" class="item__name">
     <span>{{name}}</span>
   </a>
@@ -117,13 +115,13 @@
 {% endmacro %}
 
 {% macro items(name="", items=[]) %}
-<div class="items">
-  <div class="items__title title">
+<div class="chapter">
+  <div class="chapter__title title">
     <h3 class="h3">{{name}}</h3>
   </div>
-  <div class="items__gallery js-items-gallery">
+  <div class="chapter__gallery js-items-gallery">
     {% for i in items %}
-      <div class="items__slide">
+      <div class="chapter__slide">
         {{item(i.name, i.img)}}
       </div>
     {% endfor %}
@@ -193,4 +191,23 @@
 </div>
 {% endmacro %}
 
+{% set subNavItems = ['Cuenta', 'Gestionar Dispositiv', 'Gestionar Perfiles', 'Control Parental'] %}
+{% macro subNav(nav = subNavItems, active = 1) %}
+<div class="subnav">
+  <div class="container">
+    <ul class="nav">
+      {% for item in nav %}
+      <li><a href="#" class="nav__link {%if loop.index == active%}is-active{%endif%}">{{item}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endmacro %}
 
+
+{% macro input(placeholder="", value=false, readonly=false, type="text", class="", classInput="") %}
+<div class="input {{class}}">
+  <input type="{{type}}" class="input__main js-input {{classInput}} {% if value %}is-filled{%endif%}" {% if value %} value="{{value}}" {%endif%} {% if readonly %}readonly{%endif%}>
+  <div class="input__placeholder">{{placeholder}}</div>
+</div>
+{% endmacro %}

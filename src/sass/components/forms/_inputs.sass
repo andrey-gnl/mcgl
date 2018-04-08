@@ -53,6 +53,11 @@
 		color: #fff
 		font-size: 14px
 		transition: border .3s
+		&[type*="password"]
+			letter-spacing: 8px
+		&:read-only
+			border-color: transparent
+			pointer-events: none
 		&.is-filled
 			~ #{$this}__placeholder
 				transform: translateY(-20px)
@@ -68,6 +73,13 @@
 		bottom: 13px
 		pointer-events: none
 		transition: transform .3s
+
+.input_mod
+	.input
+		&__main
+			padding-bottom: 0
+		&__placeholder
+			bottom: 9px
 
 
 .checkbox

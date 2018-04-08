@@ -1,4 +1,5 @@
 ---
+title: 'Login'
 noHeader: true
 login: true
 ---
@@ -14,16 +15,10 @@ login: true
         <form class="login__form">
           <div class="form-title">INICIA SESIÓN</div>
           <div class="form-field">
-            <div class="input">
-              <input type="text" class="input__main js-input">
-              <div class="input__placeholder">Email</div>
-            </div>
+            {{mixins.input('Email')}}
           </div>
           <div class="form-field">
-            <div class="input">
-              <input type="text" class="input__main js-input">
-              <div class="input__placeholder">Email</div>
-            </div>
+            {{mixins.input('CONTRASEÑA')}}
           </div>
           <div class="form-field">
             <label class="checkbox">

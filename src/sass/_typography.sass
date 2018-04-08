@@ -82,3 +82,19 @@ h3, .h3
 		vertical-align: middle
 		position: relative
 		top: -1px
+
+.list
+	&__title
+		+pop
+		font-weight: 300
+		font-size: 14px
+		color: #9fa2a5
+		margin-bottom: 5px
+	&__info
+		&:not(:last-child)
+			margin-bottom: 18px
+	&__item
+		+pop
+		font-size: 16px
+		&:not(:last-child)
+			margin-bottom: 3px
