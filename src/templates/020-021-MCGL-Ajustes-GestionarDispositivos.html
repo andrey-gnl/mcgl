@@ -1,5 +1,6 @@
 ---
 title: 020-021-MCGL-Ajustes-GestionarDispositivos
+notActiveNav: true
 ---
 {% extends "layouts/_layout.html" %}
 {% block content %}
@@ -44,7 +45,7 @@ title: 020-021-MCGL-Ajustes-GestionarDispositivos
             <div class="table__cell table__type">{{content.type}}</div>
             <div class="table__cell table__start">{{content.start}}</div>
             <div class="table__cell table__end">{{content.end}}</div>
-            <div class="table__cell table__edit"><a href="#" class="link">{{mixins.icon('delete')}} DESACTIVAR</a></div>
+            <div class="table__cell table__edit"><a href="#" class="link">{{mixins.icon('delete')}} <span>DESACTIVAR</span> </a></div>
           </div>
           {% endfor %}
         </div>

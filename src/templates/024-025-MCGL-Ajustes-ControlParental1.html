@@ -1,0 +1,58 @@
+---
+title: 024-025-MCGL-Ajustes-ControlParental1
+notActiveNav: true
+---
+{% extends "layouts/_layout.html" %}
+{% block content %}
+{{mixins.subNav(active=4)}}
+
+<div class="section section_lg">
+  <div class="container">
+    <div class="section__title">
+      <div class="section__title-more">
+        <h2 class="h2">CONTROL PARENTAL</h2>
+        <div class="section__meta">
+          <div class="meta">
+            Para activar el control parental es necesario que crees un PIN numérico.<br>
+            Este PIN será requerido para desactivar el control parental en la plataforma.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section__body js-pin">
+      <div class="chapter">
+        <div class="chapter__title title">
+          <h3 class="h3">PIN DE SEGURIDAD</h3>
+          <div class="section__change change js-change is-active">
+            <div class="change__edit">
+              <a href="#" class="link js-change-edit-pin">{{mixins.icon('pencil')}} <span>Editar</span></a>
+            </div>
+            <div class="change__final">
+              <a href="#" class="link js-edit-cancel-pin">{{mixins.icon('close')}} <span>Cancelar</span></a>
+              <a href="#" class="link is-active js-edit-save-pin">{{mixins.icon('done')}} <span>Crear Pin</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="chapter__body">
+          <div class="form-pin is-edit js-form-pin-wrapper">
+            <form class="form-sm form-pin__edit js-form-pin">
+              <div class="form-field-sm">
+                {{mixins.input(placeholder="PIN NUMÉRICO (HASTA 8 DÍGITOS)", type="password")}}
+              </div>
+              <div class="form-field-sm">
+                {{mixins.input(placeholder="CONFIRMAR PIN NUMÉRICO", type="password")}}
+              </div>
+            </form>
+            <form class="form-sm form-pin__current">
+              <div class="form-field-sm">
+                {{mixins.input(placeholder="PIN NUMÉRICO", value="password", type="password", readonly=true)}}
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

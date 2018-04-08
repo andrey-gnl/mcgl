@@ -29,3 +29,19 @@ PageList:
   ready: 100
 - file: 015-MCGL-MiMC-MisGrabaciones.html
   ready: 100
+- file: 016-MCGL-MiMC-MisRecordatorios-No
+  ready: 100
+- file: 017-MCGL-MiMC-MisRecordatorios-Si
+  ready: 100
+- file: 018-019-MCGL-Ajustes-Cuenta
+  ready: 100
+- file: 020-021-MCGL-Ajustes-GestionarDispositivos.html
+  ready: 100
+- file: 022-023-MCGL-Ajustes-GestionarPerfiles.html
+  ready: 100
+- file: 024-025-MCGL-Ajustes-ControlParental1.html
+  ready: 100
+- file: 026-027-MCGL-Buscador-Resultado.html
+  ready: 100
+- file: 028-029-MCGL-IniciarSesión-Default.html
+  ready: 100

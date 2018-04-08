@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>018-MCGL-Ajustes-Cuenta</title>
+    <title>024-025-MCGL-Ajustes-ControlParental1</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=1280, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
@@ -26,7 +26,7 @@
               <div class="header__logo"> <a href="#"><img src="img/logo.svg" alt="McGoLive"></a> </div>
               <div class="header__nav">
                 <ul class="nav">
-                  <li><a href="#" class="nav__link is-active">EN VIVO</a></li>
+                  <li><a href="#" class="nav__link ">EN VIVO</a></li>
                   <li><a href="#" class="nav__link">ON DEMAND</a></li>
                   <li><a href="#" class="nav__link">MI MC</a></li>
                 </ul>
@@ -62,77 +62,60 @@
         <div class="subnav">
           <div class="container">
             <ul class="nav">
-              <li><a href="#" class="nav__link is-active">Cuenta</a></li>
+              <li><a href="#" class="nav__link ">Cuenta</a></li>
               <li><a href="#" class="nav__link ">Gestionar Dispositiv</a></li>
               <li><a href="#" class="nav__link ">Gestionar Perfiles</a></li>
-              <li><a href="#" class="nav__link ">Control Parental</a></li>
+              <li><a href="#" class="nav__link is-active">Control Parental</a></li>
             </ul>
           </div>
         </div>
         <div class="section section_lg">
           <div class="container">
             <div class="section__title">
-              <h2 class="h2">Cuenta</h2>
+              <div class="section__title-more">
+                <h2 class="h2">CONTROL PARENTAL</h2>
+                <div class="section__meta">
+                  <div class="meta"> Para activar el control parental es necesario que crees un PIN numérico.<br> Este PIN será requerido para desactivar el control parental en la plataforma. </div>
+                </div>
+              </div>
             </div>
-            <div class="section__body">
-              <div class="chapter chapter_sm js-edit">
+            <div class="section__body js-pin">
+              <div class="chapter">
                 <div class="chapter__title title">
-                  <h3 class="h3">Datos Cliente</h3>
-                  <div class="chapter__change change js-change">
-                    <div class="change__edit"> <a href="#" class="link js-change-input">
+                  <h3 class="h3">PIN DE SEGURIDAD</h3>
+                  <div class="section__change change js-change is-active">
+                    <div class="change__edit"> <a href="#" class="link js-change-edit-pin">
 <svg class="icon icon-pencil "><use xlink:href="img/sprite.svg#icon-pencil"></use></svg>
  <span>Editar</span></a> </div>
-                    <div class="change__final"> <a href="#" class="link js-edit-cancel-input">
+                    <div class="change__final"> <a href="#" class="link js-edit-cancel-pin">
 <svg class="icon icon-close "><use xlink:href="img/sprite.svg#icon-close"></use></svg>
- <span>Cancelar</span></a> <a href="#" class="link is-active js-edit-save-input">
+ <span>Cancelar</span></a> <a href="#" class="link is-active js-edit-save-pin">
 <svg class="icon icon-done "><use xlink:href="img/sprite.svg#icon-done"></use></svg>
- <span>Guardar</span></a> </div>
+ <span>Crear Pin</span></a> </div>
                   </div>
                 </div>
                 <div class="chapter__body">
-                  <form action="" class="form-sm js-form-edit">
-                    <div class="form-field-sm">
-                      <div class="input input_mod"> <input type="text" class="input__main js-input js-edit-input is-filled" value="NOMBRE Y APELLIDO" readonly>
-                        <div class="input__placeholder">CONTRASEÑA</div>
+                  <div class="form-pin is-edit js-form-pin-wrapper">
+                    <form class="form-sm form-pin__edit js-form-pin">
+                      <div class="form-field-sm">
+                        <div class="input "> <input type="password" class="input__main js-input  ">
+                          <div class="input__placeholder">PIN NUMÉRICO (HASTA 8 DÍGITOS)</div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-field-sm">
-                      <div class="input input_mod"> <input type="text" class="input__main js-input js-edit-input is-filled" value="123456" readonly>
-                        <div class="input__placeholder">CLIENTE</div>
+                      <div class="form-field-sm">
+                        <div class="input "> <input type="password" class="input__main js-input  ">
+                          <div class="input__placeholder">CONFIRMAR PIN NUMÉRICO</div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-field-sm">
-                      <div class="input input_mod"> <input type="text" class="input__main js-input js-edit-input is-filled" value="3.456.765-9" readonly>
-                        <div class="input__placeholder">CI / RUT</div>
+                    </form>
+                    <form class="form-sm form-pin__current">
+                      <div class="form-field-sm">
+                        <div class="input "> <input type="password" class="input__main js-input  is-filled" value="password" readonly>
+                          <div class="input__placeholder">PIN NUMÉRICO</div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-field-sm">
-                      <div class="input input_mod"> <input type="email" class="input__main js-input js-edit-input is-filled" value="sonia@mail.com" readonly>
-                        <div class="input__placeholder">Email</div>
-                      </div>
-                    </div>
-                    <div class="form-field-sm">
-                      <div class="input input_mod"> <input type="password" class="input__main js-input js-edit-input is-filled" value="password" readonly>
-                        <div class="input__placeholder">CONTRASEÑA</div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="chapter chapter_sm">
-                <div class="chapter__title title">
-                  <h3 class="h3">Producto MC Contratado</h3>
-                </div>
-                <div class="chapter__body">
-                  <dl class="list"> <dt class="list__title">Plan MC</dt>
-                    <dd class="list__info">
-                      <div class="list__item">MC HOGAR</div>
-                    </dd> <dt class="list__title">Paquetes Premium</dt>
-                    <dd>
-                      <div class="list__item">Pack HD</div>
-                      <div class="list__item">Fútbol UY HD</div>
-                    </dd>
-                  </dl>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>

@@ -31,3 +31,15 @@
 
 .form-btn
 	margin-top: 30px
+
+.form-pin
+	$this: &
+	&.is-edit
+		#{$this}__edit
+			display: block
+		#{$this}__current
+			display: none
+	&__edit
+		display: none
+
+

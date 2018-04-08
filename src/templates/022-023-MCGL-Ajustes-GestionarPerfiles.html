@@ -1,5 +1,6 @@
 ---
 title: 022-023-MCGL-Ajustes-GestionarPerfiles.html
+notActiveNav: true
 ---
 {% extends "layouts/_layout.html" %}
 {% block content %}
@@ -50,7 +51,9 @@ title: 022-023-MCGL-Ajustes-GestionarPerfiles.html
                 <span><i></i></span>
               </label>
             </div>
-            <div class="table__cell table__edit"><a href="#" class="link">{{mixins.icon('delete')}} ELIMINAR</a></div>
+            <div class="table__cell table__edit">
+              <a href="#" class="link">{{mixins.icon('delete')}} <span>ELIMINAR</span></a>
+            </div>
           </div>
           {% endfor %}
         </form>
