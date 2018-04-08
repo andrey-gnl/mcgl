@@ -1,0 +1,54 @@
+---
+title: 020-021-MCGL-Ajustes-GestionarDispositivos
+---
+{% extends "layouts/_layout.html" %}
+{% block content %}
+{{mixins.subNav(active=2)}}
+
+<div class="section section_lg">
+  <div class="container">
+    <div class="section__title section__title_mod">
+      <h2 class="h2">GESTIONAR DISPOSITIVOS (4 ACTIVOS)</h2>
+      <div class="section__meta">
+        <div class="meta">*Puedes contar con hasta 10 dispositivos activos.</div>
+      </div>
+    </div>
+    <div class="section__body js-items">
+      <div class="table">
+        <div class="table__header">
+          <div class="table__row">
+            <div class="table__cell table__id">ID DISPOSITIVO</div>
+            <div class="table__cell table__type">TIPO DE DISPOSITIVO</div>
+            <div class="table__cell table__start">INICIO</div>
+            <div class="table__cell table__end">ÚLTIMA ACTIVIDAD</div>
+            <div class="table__cell table__edit">
+              <div class="change js-change">
+                <div class="change__edit">
+                  <a href="#" class="link js-change-edit">{{mixins.icon('pencil')}} <span>Editar</span></a>
+                </div>
+                <div class="change__final">
+                  <a href="#" class="link js-edit-cancel">{{mixins.icon('close')}} <span>Cancelar</span></a>
+                  <a href="#" class="link is-active js-edit-save">{{mixins.icon('done')}} <span>Guardar</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table__body">
+          {% set content = {id: '192874', type: 'Mac OS 12.12.5', start: '30/07/2017', end: '22/02/2018'} %}
+          {% for item in range(0, 4) %}
+          <div class="table__row js-item">
+            <div class="table__cell table__id">{{content.id}}</div>
+            <div class="table__cell table__type">{{content.type}}</div>
+            <div class="table__cell table__start">{{content.start}}</div>
+            <div class="table__cell table__end">{{content.end}}</div>
+            <div class="table__cell table__edit"><a href="#" class="link">{{mixins.icon('delete')}} DESACTIVAR</a></div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

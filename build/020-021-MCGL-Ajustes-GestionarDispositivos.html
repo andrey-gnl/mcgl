@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>018-019-MCGL-Ajustes-Cuenta</title>
+    <title>020-021-MCGL-Ajustes-GestionarDispositivos</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=1280, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
@@ -62,8 +62,8 @@
         <div class="subnav">
           <div class="container">
             <ul class="nav">
-              <li><a href="#" class="nav__link is-active">Cuenta</a></li>
-              <li><a href="#" class="nav__link ">Gestionar Dispositiv</a></li>
+              <li><a href="#" class="nav__link ">Cuenta</a></li>
+              <li><a href="#" class="nav__link is-active">Gestionar Dispositiv</a></li>
               <li><a href="#" class="nav__link ">Gestionar Perfiles</a></li>
               <li><a href="#" class="nav__link ">Control Parental</a></li>
             </ul>
@@ -71,68 +71,71 @@
         </div>
         <div class="section section_lg">
           <div class="container">
-            <div class="section__title">
-              <h2 class="h2">Cuenta</h2>
+            <div class="section__title section__title_mod">
+              <h2 class="h2">GESTIONAR DISPOSITIVOS (4 ACTIVOS)</h2>
+              <div class="section__meta">
+                <div class="meta">*Puedes contar con hasta 10 dispositivos activos.</div>
+              </div>
             </div>
-            <div class="section__body">
-              <div class="chapter chapter_sm js-edit">
-                <div class="chapter__title title">
-                  <h3 class="h3">Datos Cliente</h3>
-                  <div class="chapter__change change js-change">
-                    <div class="change__edit"> <a href="#" class="link js-change-input">
+            <div class="section__body js-items">
+              <div class="table">
+                <div class="table__header">
+                  <div class="table__row">
+                    <div class="table__cell table__id">ID DISPOSITIVO</div>
+                    <div class="table__cell table__type">TIPO DE DISPOSITIVO</div>
+                    <div class="table__cell table__start">INICIO</div>
+                    <div class="table__cell table__end">ÚLTIMA ACTIVIDAD</div>
+                    <div class="table__cell table__edit">
+                      <div class="change js-change">
+                        <div class="change__edit"> <a href="#" class="link js-change-edit">
 <svg class="icon icon-pencil "><use xlink:href="img/sprite.svg#icon-pencil"></use></svg>
  <span>Editar</span></a> </div>
-                    <div class="change__final"> <a href="#" class="link js-edit-cancel-input">
+                        <div class="change__final"> <a href="#" class="link js-edit-cancel">
 <svg class="icon icon-close "><use xlink:href="img/sprite.svg#icon-close"></use></svg>
- <span>Cancelar</span></a> <a href="#" class="link is-active js-edit-save-input">
+ <span>Cancelar</span></a> <a href="#" class="link is-active js-edit-save">
 <svg class="icon icon-done "><use xlink:href="img/sprite.svg#icon-done"></use></svg>
  <span>Guardar</span></a> </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="chapter__body">
-                  <form action="" class="form-sm js-form-edit">
-                    <div class="form-field-sm">
-                      <div class="input input_mod"> <input type="text" class="input__main js-input js-edit-input is-filled" value="NOMBRE Y APELLIDO" readonly>
-                        <div class="input__placeholder">CONTRASEÑA</div>
-                      </div>
-                    </div>
-                    <div class="form-field-sm">
-                      <div class="input input_mod"> <input type="text" class="input__main js-input js-edit-input is-filled" value="123456" readonly>
-                        <div class="input__placeholder">CLIENTE</div>
-                      </div>
-                    </div>
-                    <div class="form-field-sm">
-                      <div class="input input_mod"> <input type="text" class="input__main js-input js-edit-input is-filled" value="3.456.765-9" readonly>
-                        <div class="input__placeholder">CI / RUT</div>
-                      </div>
-                    </div>
-                    <div class="form-field-sm">
-                      <div class="input input_mod"> <input type="email" class="input__main js-input js-edit-input is-filled" value="sonia@mail.com" readonly>
-                        <div class="input__placeholder">Email</div>
-                      </div>
-                    </div>
-                    <div class="form-field-sm">
-                      <div class="input input_mod"> <input type="password" class="input__main js-input js-edit-input is-filled" value="password" readonly>
-                        <div class="input__placeholder">CONTRASEÑA</div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="chapter chapter_sm">
-                <div class="chapter__title title">
-                  <h3 class="h3">Producto MC Contratado</h3>
-                </div>
-                <div class="chapter__body">
-                  <dl class="list"> <dt class="list__title">Plan MC</dt>
-                    <dd class="list__info">
-                      <div class="list__item">MC HOGAR</div>
-                    </dd> <dt class="list__title">Paquetes Premium</dt>
-                    <dd>
-                      <div class="list__item">Pack HD</div>
-                      <div class="list__item">Fútbol UY HD</div>
-                    </dd>
-                  </dl>
+                <div class="table__body">
+                  <div class="table__row js-item">
+                    <div class="table__cell table__id">192874</div>
+                    <div class="table__cell table__type">Mac OS 12.12.5</div>
+                    <div class="table__cell table__start">30/07/2017</div>
+                    <div class="table__cell table__end">22/02/2018</div>
+                    <div class="table__cell table__edit"><a href="#" class="link">
+<svg class="icon icon-delete "><use xlink:href="img/sprite.svg#icon-delete"></use></svg>
+ DESACTIVAR</a></div>
+                  </div>
+                  <div class="table__row js-item">
+                    <div class="table__cell table__id">192874</div>
+                    <div class="table__cell table__type">Mac OS 12.12.5</div>
+                    <div class="table__cell table__start">30/07/2017</div>
+                    <div class="table__cell table__end">22/02/2018</div>
+                    <div class="table__cell table__edit"><a href="#" class="link">
+<svg class="icon icon-delete "><use xlink:href="img/sprite.svg#icon-delete"></use></svg>
+ DESACTIVAR</a></div>
+                  </div>
+                  <div class="table__row js-item">
+                    <div class="table__cell table__id">192874</div>
+                    <div class="table__cell table__type">Mac OS 12.12.5</div>
+                    <div class="table__cell table__start">30/07/2017</div>
+                    <div class="table__cell table__end">22/02/2018</div>
+                    <div class="table__cell table__edit"><a href="#" class="link">
+<svg class="icon icon-delete "><use xlink:href="img/sprite.svg#icon-delete"></use></svg>
+ DESACTIVAR</a></div>
+                  </div>
+                  <div class="table__row js-item">
+                    <div class="table__cell table__id">192874</div>
+                    <div class="table__cell table__type">Mac OS 12.12.5</div>
+                    <div class="table__cell table__start">30/07/2017</div>
+                    <div class="table__cell table__end">22/02/2018</div>
+                    <div class="table__cell table__edit"><a href="#" class="link">
+<svg class="icon icon-delete "><use xlink:href="img/sprite.svg#icon-delete"></use></svg>
+ DESACTIVAR</a></div>
+                  </div>
                 </div>
               </div>
             </div>
