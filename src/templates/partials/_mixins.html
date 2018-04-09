@@ -4,6 +4,7 @@
 
 {% macro btnIcon(iconName, text, circle=false, class="", checkbox=false) %}
 {% if checkbox %}
+<!-- btnIcon START -->
 <label class="btn {% if circle%}btn_circle{%endif%} {{class}}">
 {% else %}
 <button class="btn {% if circle%}btn_circle{%endif%} {{class}}">
@@ -20,9 +21,11 @@
 {% else %}
 </button>
 {% endif %}
+<!-- btnIcon END -->
 {% endmacro %}
 
 {% macro progress(showTime=true, num=65) %}
+<!-- progress START -->
 <div class="progress">
   {% if  showTime %}
   <span>10:30 AM</span>
@@ -34,6 +37,7 @@
   <span>11:30 AM</span>
   {% endif %}
 </div>
+<!-- progress END -->
 {% endmacro %}
 
 {% macro label(text) %}
@@ -48,6 +52,7 @@
 {% endmacro %}
 
 {% macro select(title="", options=[]) %}
+<!-- select START -->
 <div class="select">
   {% if title %}
   <div class="select__title">{{title | safe}}</div>
@@ -58,9 +63,11 @@
     {% endfor %}
   </select>
 </div>
+<!-- select END -->
 {% endmacro %}
 
 {% macro breadcrumbs(breadcrumbs=[]) %}
+<!-- breadcrumbs START -->
 <div class="breadcrumbs">
   <div class="container">
     <ul class="breadcrumbs__list">
@@ -71,9 +78,11 @@
     </ul>
   </div>
 </div>
+<!-- breadcrumbs END -->
 {% endmacro %}
 
 {% macro item(name, img, mod=false, logo=false, info=false, infoBig=false, infoBig2=false, class="", canDelete=false) %}
+<!-- item START -->
 <div class="item {%if mod%}item_mod{%endif%} {{class}}">
   <div class="item__top">
     <a href="#" class="item__img" style="background-image: url('{{img}}');">
@@ -112,9 +121,11 @@
   </div>
   {% endif %}
 </div>
+<!-- item END -->
 {% endmacro %}
 
 {% macro items(name="", items=[]) %}
+<!-- chapter START -->
 <div class="chapter">
   <div class="chapter__title title">
     <h3 class="h3">{{name}}</h3>
@@ -127,9 +138,11 @@
     {% endfor %}
   </div>
 </div>
+<!-- chapter END -->
 {% endmacro %}
 
 {% macro movie(img="img/got.jpg", name="Game of Thrones", description="7 Temporadas", h5="DRAMA | SD", links=false, modal=false, favourite=true) %}
+<!-- movie START -->
 <div class="movie {% if links %}movie_links{% endif %}">
   <div class="movie__side">
     <div class="movie__image" style="background-image: url('{{img}}')"></div>
@@ -178,9 +191,11 @@
     </div>
   </div>
 </div>
+<!-- movie END -->
 {% endmacro %}
 
 {% macro cItem(title="HBO GO", name="Ir a Plataforma Play", logo="img/hbo.png", img="img/hbo_item.jpg") %}
+<!-- cItem START -->
 <div class="c-item">
   <div class="c-item__title title">
     <h3 class="h3">{{title | safe}}</h3>
@@ -189,10 +204,12 @@
       {{item(name=name, img=img, mod=true, logo=logo)}}
   </div>
 </div>
+<!-- cItem END -->
 {% endmacro %}
 
 {% set subNavItems = ['Cuenta', 'Gestionar Dispositiv', 'Gestionar Perfiles', 'Control Parental'] %}
 {% macro subNav(nav = subNavItems, active = 1) %}
+<!-- subnav START -->
 <div class="subnav">
   <div class="container">
     <ul class="nav">
@@ -202,6 +219,7 @@
     </ul>
   </div>
 </div>
+<!-- subnav END -->
 {% endmacro %}
 
 

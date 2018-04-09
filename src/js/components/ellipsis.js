@@ -1,30 +1,3 @@
-// $('.js-ellipsis').each((i, item) => {
-//   const target = $(item);
-//   const parent = target.parents('.js-ellipsis-parent');
-
-//   target.trunk8({
-//     fill: '&hellip;',
-//     lines: 3,
-//     onTruncate() {
-//       parent.addClass('is-truncuted');
-//     }
-//   });
-// });
-
-// $('.js-ellipsis-toggle').on('click', function() {
-//   const target = $(this);
-//   const parent = target.closest('.js-ellipsis-parent');
-//   const ellipsed = parent.find('.js-ellipsis');
-
-//   parent.toggleClass('is-open');
-
-//   if(parent.hasClass('is-open')) {
-//     ellipsed.trunk8('revert');
-//   } else {
-//     ellipsed.trunk8();
-//   }
-// });
-
 const ellipsis = {
   init(el = $('.js-ellipsis')) {
 
@@ -43,7 +16,6 @@ const ellipsis = {
         parent.addClass('is-not-inited');
         return false;
       }
-
 
       while (text.height() > maxHeight) {
         text.text(text.text().replace(/\W*\s(\S)*$/, '...'));
@@ -80,6 +52,4 @@ const ellipsis = {
 
 ellipsis.init();
 
-
 export default ellipsis;
-
