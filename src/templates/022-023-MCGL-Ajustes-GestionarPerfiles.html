@@ -39,11 +39,20 @@ notActiveNav: true
         </div>
         <form class="table__body js-form-edit-profile">
 
-          {% for item in range(0, 2) %}
-          <div class="table__row js-edit-profile">
-            <div class="table__cell table__profile">{{mixins.icon('ava')}}</div>
+          {% set rows = [
+            {
+              name: 'Marcela',
+              ico: 'ava'
+            }, {
+              name: 'Sofi',
+              ico: 'wink'
+            }
+            ] %}
+          {% for item in rows %}
+          <div class="table__row js-edit-profile js-item">
+            <div class="table__cell table__profile">{{mixins.icon(item.ico)}}</div>
             <div class="table__cell table__name">
-              {{mixins.input(value="Marcela", readonly=true, class="input_lg input_simple", classInput=" js-edit-profile-input")}}
+              {{mixins.input(value=item.name, readonly=true, class="input_lg input_simple", classInput=" js-edit-profile-input")}}
             </div>
             <div class="table__cell table__control">
               <label class="c-checkbox">
@@ -52,7 +61,7 @@ notActiveNav: true
               </label>
             </div>
             <div class="table__cell table__edit">
-              <a href="#" class="link">{{mixins.icon('delete')}} <span>ELIMINAR</span></a>
+              <a href="#" class="link js-remove-item">{{mixins.icon('delete')}} <span>ELIMINAR</span></a>
             </div>
           </div>
           {% endfor %}

@@ -92,7 +92,7 @@
       <div class="item__play play"></div>
     </a>
     {%if canDelete%}
-    <a href="#" class="item__delete">{{icon('delete')}}</a>
+    <a href="#" class="item__delete js-remove-item">{{icon('delete')}}</a>
     {%endif%}
   </div>
 
@@ -141,7 +141,7 @@
 <!-- chapter END -->
 {% endmacro %}
 
-{% macro movie(img="img/got.jpg", name="Game of Thrones", description="7 Temporadas", h5="DRAMA | SD", links=false, modal=false, favourite=true) %}
+{% macro movie(img="img/got.jpg", name="Game of Thrones", description="7 Temporadas", h5="DRAMA | SD", links=false, modal=false, favourite=true, footerText="SIN CARGO") %}
 <!-- movie START -->
 <div class="movie {% if links %}movie_links{% endif %}">
   <div class="movie__side">
@@ -174,7 +174,7 @@
       </div>
     </div>
     <div class="movie__footer">
-      <div class="movie__footer-text">SIN CARGO</div>
+      <div class="movie__footer-text">{{footerText}}</div>
       <div class="movie__btns">
         {% if modal  %}
           {{btnIcon('money', 'ALQUILAR', class="js-show-modal")}}

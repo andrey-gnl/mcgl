@@ -4,8 +4,15 @@
 	position: relative
 	padding-right: 80px
 	&__item
+		position: relative
 		height: 320px
-		background: center no-repeat / cover
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		&:hover
+			#{$this}__play
+				opacity: 1
+				visibility: visible
 	&__slider-main
 		&:not(.slick-initialized)
 			.slick-slide, .gallery__item
@@ -16,13 +23,10 @@
 		font-size: 0
 		border-radius: 5px
 		overflow: hidden
-
-		&:hover
-			#{$this}__play
-				opacity: 1
-				visibility: visible
 		.slick-vertical .slick-slide
 			border: 0
+		.slick-list
+			border-radius: 4px
 	&__controls
 		position: absolute
 		top: 0

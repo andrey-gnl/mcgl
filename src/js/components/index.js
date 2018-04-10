@@ -5,3 +5,4 @@ import './modal';
 import './editItems';
 import './search';
 import './input';
+import './items';

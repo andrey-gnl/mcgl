@@ -125,6 +125,16 @@
         <path d="M8 10.4c.269-.806.769-1.208 1.5-1.208s1.231.402 1.5 1.208" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M11 14h3v.5a1.5 1.5 0 0 1-3 0V14z"/>
     </g>
+</symbol><symbol id="icon-wink" viewBox="0 0 27 27">
+    <title>
+        avatar
+    </title>
+    <g transform="translate(1 1)" fill-rule="evenodd">
+        <path d="M12.5 25.5c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13zm0-1c6.627 0 12-5.373 12-12s-5.373-12-12-12-12 5.373-12 12 5.373 12 12 12z" fill-rule="nonzero"/>
+        <path d="M8.167 14.308a.5.5 0 0 1 .788-.616l.363.464a3.5 3.5 0 0 0 2.757 1.344H13a.5.5 0 1 1 0 1h-.925a4.5 4.5 0 0 1-3.545-1.728l-.363-.464z" fill-rule="nonzero"/>
+        <path d="M10.013 10.597a.5.5 0 1 1-.63-.777c.443-.36.99-.538 1.62-.538a.5.5 0 0 1 0 1c-.41 0-.732.106-.99.315z" fill-rule="nonzero"/>
+        <circle cx="14" cy="10" r="1"/>
+    </g>
 </symbol><symbol id="icon-ytb" viewBox="0 0 29 22">
     <g stroke-width=".96" fill-rule="evenodd" opacity=".6" stroke-linecap="round" stroke-linejoin="round">
         <path d="M11.24 5.6v10.8l8.64-5.4z"/>
