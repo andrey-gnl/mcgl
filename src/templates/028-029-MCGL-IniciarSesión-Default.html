@@ -1,16 +1,70 @@
 ---
 title: 'Login'
-noHeader: true
-login: true
+hero: true
 ---
 {% extends "layouts/_layout.html" %}
 {% block content %}
-  <div class="login">
+
+  <!-- START HERO -->
+  <div class="hero ">
+    <div class="hero__controls">
+        <div class="container">
+          <button class="js-slider-prev slick-arrow slick-prev"></button>
+          <button class="js-slider-next slick-arrow slick-next"></button>
+        </div>
+    </div>
+    <div class="hero__slider js-slider">
+      {% for i in range(4)%}
+      <div class="hero__slide" style="background-image: url('img/hero.jpg')">
+        <div class="container">
+          <div class="hero__info">
+            <div class="hero__type">Series</div>
+            <div class="hero__name">Vikings</div>
+            <div class="hero__description">Vikings es la serie de ficción que narra las épicas aventuras de los guerreros más feroces de todos los tiempos.</div>
+            <div class="hero__buttons">
+              <a href="#" class="button button_red">{{mixins.icon('play')}} REPRODUCIR</a>
+              <a href="#" class="button">{{mixins.icon('heart')}} FAVORITOS</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <!-- START HERO -->
+
+  <section class="section">
+    <div class="container">
+      <div class="section__title">
+        <h2 class="h2">EN VIVO</h2>
+      </div>
+      <div class="section__body">
+        {% include "partials/_block.html" %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__title">
+        <h2 class="h2">ON DEMAND</h2>
+      </div>
+      <div class="section__body">
+        {% include "partials/_items.html" %}
+      </div>
+      <div class="section__btns">
+        <a href="#" class="button">VER TODOS ON DEMAND</a>
+        <a href="#" class="button">VER PLATAFORMAS PLAY</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="login js-login">
     <div class="login__col login__col_form">
       <div class="login__container">
         <div class="login__top">
           <div class="login__logo"><a href="#"><img src="img/logo.svg" alt="McGoLive"></a></div>
-          <div class="login__btn"><button class="btn-close">{{mixins.icon('close-x')}}</button></div>
+          <div class="login__btn"><button class="btn-close js-close-login">{{mixins.icon('close-x')}}</button></div>
         </div>
         <form class="login__form">
           <div class="form-title">INICIA SESIÓN</div>

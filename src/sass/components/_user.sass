@@ -1,5 +1,22 @@
 .user
+	$this: &
+
 	position: relative
+	&:after
+		content: ''
+		position: absolute
+		top: 100%
+		height: 32px
+		width: 130px
+		right: 0
+		pointer-events: none
+	&:hover
+		&:after
+			pointer-events: all
+		#{$this}__menu
+			opacity: 1
+			visibility: visible
+			transform: translateY(0)
 	.icon
 		fill: #fff
 	.icon-chevron
