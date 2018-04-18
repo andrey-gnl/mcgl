@@ -28,7 +28,7 @@ $('.js-slider').slick({
     ]
   });
 
-  $(window).on('resize orientationchange', () => {
+  $(window).on('resize', () => {
     slider.slick('resize');
   });
 
@@ -47,8 +47,19 @@ $('.js-slider').slick({
 }
 
 // items slider
-$('.js-items-gallery').slick({
-  arrows: true,
-  slidesToShow: 4,
-  infinite: false
-});
+{
+  $('.js-items-gallery').slick({
+    arrows: true,
+    slidesToShow: 4,
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings: 'unslick'
+      }
+    ]
+  });
+  $(window).on('resize', () => {
+    $('.js-items-gallery').slick('resize');
+  });
+}
