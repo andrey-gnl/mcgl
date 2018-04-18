@@ -2,20 +2,47 @@
 	$this: &
 
 	position: relative
-	padding-right: 80px
+	+from-xs
+		padding-right: 80px
+	+xs
+		margin-left: -30px
+		margin-right: -30px
 	&__item
 		position: relative
 		height: 320px
 		background-position: center
 		background-repeat: no-repeat
 		background-size: cover
+		+xs
+			width: 100%
+			height: 0
+			padding-bottom: 56.25%
 		&:hover
 			#{$this}__play
 				opacity: 1
 				visibility: visible
+	&__play
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		transition: opacity .3s, visibility .3s
+		+from-xs
+			opacity: 0
+			visibility: hidden
+			&-cover
+				opacity: 1
+				visibility: visible
+	&__play-icon
+		position: absolute
+		bottom: 10px
+		right: 10px
+		+from-xs
+			display: none
 	&__slider-main
 		&:not(.slick-initialized)
-			.slick-slide, .gallery__item
+			.slick-slide, #{$this}__item-wrap
 				&:not(:first-child)
 					display: none
 	&__slider
@@ -23,10 +50,14 @@
 		font-size: 0
 		border-radius: 5px
 		overflow: hidden
+		+xs
+			border-radius: 0
 		.slick-vertical .slick-slide
 			border: 0
 		.slick-list
 			border-radius: 4px
+			+xs
+				border-radius: 0
 	&__controls
 		position: absolute
 		top: 0
@@ -36,6 +67,8 @@
 		align-items: center
 		justify-content: center
 		flex-direction: column
+		+xs
+			display: none
 	&__arr
 		&:not(:last-child)
 			margin-bottom: 60px

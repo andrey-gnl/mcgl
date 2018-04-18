@@ -8,9 +8,12 @@
 		left: 0
 		top: 0
 		width: 70px
-		min-width: 70px
+		+from-sm
+			min-width: 70px
 		+md
 			position: static
+		+sm
+			width: 42px
 		img
 			max-width: 100%
 			height: auto
@@ -43,6 +46,8 @@
 		color: rgba(#fff, .6)
 		font-size: 14px
 		line-height: 1.5
+		+xs
+			font-size: 12px
 		&:not(:last-child)
 			margin-bottom: 15px
 		&:not(.is-truncuted)
@@ -62,6 +67,8 @@
 			height: 63px
 			overflow: hidden
 			+gpu
+			+xs
+				height: 54px
 			.clone
 				display: none
 	&__more
@@ -79,13 +86,21 @@
 	&__buttons
 		.button
 			min-width: 204px
-			+m-lg
-				display: flex
+			+r(1200)
+				+rmin(1024)
+					display: flex
+					width: 100%
+			+xs
+				width: 100%
 			&:not(:last-child)
 				margin-right: 25px
-				+m-lg
-					margin-bottom: 20px
+				+r(1200)
+					+rmin(1024)
+						margin-bottom: 20px
+						margin-right: 0
+				+xs
 					margin-right: 0
+					margin-bottom: 10px
 
 .info_simple
 	.info

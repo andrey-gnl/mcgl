@@ -17,7 +17,19 @@ $('.js-slider').slick({
   slider.slick({
     vertical: true,
     prevArrow: '.js-v-slider-prev',
-    nextArrow: '.js-v-slider-next'
+    nextArrow: '.js-v-slider-next',
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          vertical: false
+        }
+      }
+    ]
+  });
+
+  $(window).on('resize orientationchange', () => {
+    slider.slick('resize');
   });
 
   slider.on('beforeChange', function(e, slick, currentSlide, nextSlide) {
