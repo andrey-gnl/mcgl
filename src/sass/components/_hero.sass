@@ -1,5 +1,7 @@
 .hero
 	+pop
+	+sm
+		padding-bottom: 20px
 	&__controls
 		position: absolute
 		top: 0
@@ -9,6 +11,12 @@
 		min-width: 320px
 		+rmin(1600)
 			height: 850px
+		+lg
+			height: 580px
+		+md
+			height: 500px
+		+sm
+			display: none
 		> .container
 			height: 100%
 	&__slider
@@ -35,10 +43,15 @@
 		padding: 0 15px
 		margin: 0 auto
 		text-align: right
+		+sm
+			bottom: -25px
+			text-align: center
 		li
 			display: inline-block
 			&:not(:first-child)
 				margin-left: 13px
+				+sm
+					margin-left: 10px
 			&.slick-active
 				button
 					opacity: 1
@@ -52,6 +65,9 @@
 			opacity: .6
 			transform: scale(.9)
 			transition: transform .3s, opacity .3s
+			+sm
+				width: 7px
+				height: 7px
 	&__slide
 		position: relative
 		height: 680px
@@ -61,6 +77,15 @@
 		+rmin(1600)
 			height: 850px
 			padding-top: 150px
+		+lg
+			height: 580px
+		+md
+			height: 500px
+		+sm
+			height: 360px
+			padding-top: 0
+			> .container
+				height: 100%
 		&:after
 			content: ''
 			position: absolute
@@ -75,6 +100,15 @@
 		z-index: 2
 		padding-top: 160px
 		padding-left: 97px
+		+md
+			padding-top: 100px
+		+sm
+			padding-top: 0
+			padding-left: 0
+			position: absolute
+			bottom: 30px
+			left: 30px
+			right: 30px
 	&__type
 		position: relative
 		padding-bottom: 9px
@@ -97,13 +131,19 @@
 		+med
 		font-size: 60px
 		line-height: 1
+		+sm
+			font-size: 34px
+			margin-bottom: 14px
 	&__description
 		max-width: 377px
 		margin-bottom: 26px
 		font-size: 16px
 		line-height: 1.5
+		+sm
+			display: none
 	&__buttons
 		.button
 			&:not(:last-child)
-				margin-right: 30px
+				+from-sm
+					margin-right: 30px
 
