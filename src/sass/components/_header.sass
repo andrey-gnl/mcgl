@@ -1,6 +1,8 @@
 .header
 	position: relative
 	z-index: 10
+	+sm
+		display: none
 	&.is-search-open
 		.nav > li
 			> .nav__link.is-active, > .nav__link
@@ -61,7 +63,7 @@
 	top: 0
 	left: 0
 	width: 100%
-	min-width: 1280px
+	min-width: 320px
 
 .header_submenu
 	padding-bottom: 65px
@@ -73,5 +75,116 @@
 		right: 0
 		height: 65px
 		background: rgba(#fff , .05)
+
+$bg: linear-gradient(to bottom,#02050a 42%,#0f1c29 100%)
+
+.header-mob
+	position: relative
+	display: none
+	z-index: 5
+	+sm
+		display: block
+	&__inner
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+		height: 56px
+		z-index: 2
+		overflow: hidden
+		padding: 0 15px
+		&:after
+			content: ''
+			position: absolute
+			height: 100vh
+			top: 0
+			left: -15px
+			right: -15px
+			background-image: $bg
+			z-index: -1
+			pointer-events: none
+	&__search
+		.icon
+			fill: #fff
+			font-size: 16px
+	&__search-btn
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			width: 30px
+			height: 30px
+			top: -7px
+			left: -7px
+	&__menu
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 100vh
+		padding-top: 56px
+		padding: 56px 30px 15px
+		overflow: auto
+		background-image: $bg
+		opacity: 0
+		visibility: hidden
+		transition: opacity .3s, visibility .3s
+		&.is-open
+			opacity: 1
+			visibility: visible
+	&__link
+		border-bottom: 1px solid #26415f
+		font-weight: 500
+		> a
+			width: 100%
+			color: rgba(#fff, .6)
+			display: flex
+			justify-content: space-between
+			align-items: center
+			height: 60px
+			font-size: 13px
+			text-transform: uppercase
+			&.is-open
+				.icon
+					transform: rotate(180deg)
+			&:hover, &:active
+				color: #fff
+			.icon
+				font-size: 4px
+				fill: #fff
+				transition: transform .3s
+	&__submenu
+		padding-bottom: 20px
+		display: none
+		&-link
+			font-size: 13px
+			color: rgba(#fff, .6)
+			display: block
+			&:not(:last-child)
+				margin-bottom: 20px
+			&:hover, &:active
+				color: #fff
+	&__search-form
+		position: absolute
+		padding: 71px 15px 15px
+		overflow: hidden
+		top: 0
+		width: 100%
+		display: none
+		&:after
+			content: ''
+			position: absolute
+			height: 100vh
+			top: 0
+			left: -15px
+			right: -15px
+			background-image: $bg
+			z-index: -1
+			pointer-events: none
+
+
+
+
+
 
 

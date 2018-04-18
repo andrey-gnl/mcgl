@@ -1,8 +1,16 @@
 .block
 	display: flex
+	+md
+		display: block
 	&__gallery
 		flex: 1 0 563px
 		margin-right: 55px
+		+lg
+			flex: 1 0 500px
+			margin-right: 30px
+		+md
+			max-width: 600px
+			margin: 0 auto 20px
 	&__info
 		flex: 100%
 	&__tab

@@ -9,12 +9,18 @@
 		top: 0
 		width: 70px
 		min-width: 70px
+		+md
+			position: static
 		img
 			max-width: 100%
 			height: auto
 	&__body
 		padding-top: 6px
 		padding-left: 100px
+		+lg
+			padding-left: 85px
+		+md
+			padding-left: 0
 	&__heading
 		font-size: 16px
 		font-weight: 500
@@ -73,8 +79,13 @@
 	&__buttons
 		.button
 			min-width: 204px
+			+m-lg
+				display: flex
 			&:not(:last-child)
 				margin-right: 25px
+				+m-lg
+					margin-bottom: 20px
+					margin-right: 0
 
 .info_simple
 	.info

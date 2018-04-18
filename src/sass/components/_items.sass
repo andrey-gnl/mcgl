@@ -9,8 +9,12 @@
 				white-space: normal
 	.slick-slide
 		padding: 0 15px
+		+r(1100)
+			padding: 0 7px
 	.slick-list
 		margin: 0 -15px
+		+r(1100)
+			padding: 0 10px
 	.slick-arrow
 		position: absolute
 		width: 45px
@@ -36,6 +40,9 @@
 	&__slide
 		display: inline-block
 		vertical-align: top
+		+r(1100)
+			.item
+				min-width: 0
 		&:not(:last-child)
 			margin-right: 30px
 
@@ -48,7 +55,6 @@
 	$this: &
 
 	display: block
-	min-width: 276px
 	padding-bottom: 5px
 	&.is-removable
 		#{$this}__delete
