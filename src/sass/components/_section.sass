@@ -2,6 +2,8 @@
 	padding: 90px 0 60px
 	+lg
 		padding-top: 40px
+	+sm
+		padding-bottom: 40px
 	&__title
 		margin-bottom: 50px
 		display: flex
@@ -18,9 +20,19 @@
 		margin-top: 63px
 		padding-top: 30px
 		border-top: 2px solid #0e222e
+		+sm
+			margin-top: 20px
+			padding-top: 20px
 		.button
+			+xs
+				width: 100%
 			&:not(:last-child)
-				margin-right: 26px
+				+from-xs
+					margin-right: 26px
+				+xs
+					margin-bottom: 10px
+
+
 	&__select
 		padding-top: 20px
 		border-top: 2px solid #081c26
@@ -38,3 +50,7 @@
 .section_sm
 	padding-top: 80px
 	padding-bottom: 0
+
+.section_no-pb-sm
+	+sm
+		padding-bottom: 0
