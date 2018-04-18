@@ -2,23 +2,54 @@
 	position: relative
 	background: #000
 	padding: 25px 0
+	+sm
+		padding: 20px 0
+	> .container
+		+sm
+			display: flex
+			flex-direction: column
+			justify-content: center
 	&__left
-		float: left
+		+from-sm
+			float: left
+		+sm
+			order: 1
+			text-align: center
 	&__right
-		float: right
-		padding-top: 2px
+		+from-sm
+			float: right
+			padding-top: 2px
+		+sm
+			order: 3
+			text-align: center
 	&__center
-		padding: 0 170px 0 100px
+		+sm
+			order: 2
+			margin: 20px 0
+		+from-sm
+			padding: 0 170px 0 100px
+			+md
+				padding-right: 90px
+				padding-left: 90px
+
 	&__info
 		display: flex
 		justify-content: center
 		align-items: center
+		+md
+			flex-direction: column
 	&__text
 		margin-right: 40px
 		color: #949494
 		font-size: 11px
 		text-align: right
 		+pop
+		+md
+			+from-sm
+				margin-right: 15px
+		+sm
+			text-align: center
+			margin-right: 0
 		a
 			color: #fff
 			&:hover
@@ -39,3 +70,12 @@
 				text-decoration: underline
 		li
 			display: inline-block
+	&__soc
+		+sm
+			order: -1
+			margin-bottom: 20px
+	&__mc
+		+sm
+			width: 60px
+			height: auto
+

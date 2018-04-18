@@ -1,16 +1,25 @@
 .soc
+	font-size: 0
 	li
 		display: inline-block
 		vertical-align: middle
 		a
-			opacity: .6
-			transition: opacity .3s
-			&:hover
-				opacity: 1
+			+from-xs
+				opacity: .6
+				transition: opacity .3s
+				&:hover
+					opacity: 1
 		&:not(:last-child)
 			margin-right: 10px
+			+sm
+				margin-right: 18px
 		.icon
 			font-size: 24px
 			max-width: 28px
 			stroke: #fff
 			+gpu
+			+sm
+				font-size: 18px
+		.icon-ytb
+			+sm
+				font-size: 15px
