@@ -111,6 +111,8 @@ $calendarItemHeight: 65px
 		z-index: 2
 		float: left
 		width: $calendarAsideWidth
+		+sm
+			width: 123px
 	&__info
 		padding: 12px 10px 10px 20px
 	&__title
@@ -212,7 +214,7 @@ $calendarItemHeight: 65px
 			background: #0e1b29
 			+vertical
 		&-prev
-			left: 0
+			left: -1px
 		&-next
 			right: 0
 		&-icon

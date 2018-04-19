@@ -1,7 +1,20 @@
 .calendar
 	&__settings
-		text-align: right
-		margin-bottom: 30px
+		margin: 0 -15px 30px
+		font-size: 0
+		+from-sm
+			text-align: right
+		+sm
+			margin-left: -10px
+			margin-right: -10px
 	&__select
 		display: inline-block
 		vertical-align: top
+		padding: 0 15px
+		+sm
+			width: 50%
+			padding-left: 10px
+			padding-right: 10px
+			margin-bottom: 15px
+		+xs
+			width: 100%

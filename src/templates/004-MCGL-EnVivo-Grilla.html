@@ -7,21 +7,27 @@ title: 004-MCGL-EnVivo-Grilla
     <div class="container">
       <div class="section__title">
         <h2 class="h2">GRILLA EN VIVO</h2>
-        <div class="section__btn">
+        <div class="section__btn hide-xs">
           <a href="#" class="button">VER EN VIVO</a>
         </div>
       </div>
       <div class="section__body">
         <div class="calendar">
           <div class="calendar__settings">
-            {%set dates = ['16/02/18','17/02/18', '18/02/18', '19/02/18', '20/02/18', '21/02/18', '22/02/18', '23/02/18']%}
-            {{mixins.select('Fecha', dates)}}
 
-            {%set categories = ['Películas', 'Series', 'Deportes', 'Infantiles', 'Culturales']%}
-            {{mixins.select('Categoria', categories)}}
+            <div class="calendar__select">
+              {%set dates = ['16/02/18','17/02/18', '18/02/18', '19/02/18', '20/02/18', '21/02/18', '22/02/18', '23/02/18']%}
+              {{mixins.select('Fecha', dates)}}
+            </div>
+            <div class="calendar__select">
+              {%set categories = ['Películas', 'Series', 'Deportes', 'Infantiles', 'Culturales']%}
+              {{mixins.select('Categoria', categories)}}
+            </div>
+            <div class="calendar__select">
+              {%set channels = ['Todos','Canal 1', 'Canal 2', 'Canal 3']%}
+              {{mixins.select('Canal', channels)}}
+            </div>
 
-            {%set channels = ['Todos','Canal 1', 'Canal 2', 'Canal 3']%}
-            {{mixins.select('Canal', channels)}}
           </div>
           <div class="calendar__body">
             {% include 'partials/_awesome-calendar.html' %}

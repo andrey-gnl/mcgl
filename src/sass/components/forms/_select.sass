@@ -2,7 +2,9 @@
 	position: relative
 	display: inline-block
 	text-align: left
-	min-width: 172px
+	width: 100%
+	+from-xs
+		min-width: 172px
 	& + .select
 		margin-left: 30px
 	&:after
@@ -28,9 +30,16 @@
 		font-size: 16px
 		cursor: pointer
 		appearance: none
+		+xs
+			font-size: 14px
+			padding-bottom: 2px
 	&__title
 		margin-bottom: 7px
 		text-transform: uppercase
 		+pop
 		font-weight: 300
 		color: #898f92
+		font-size: 14px
+		+xs
+			margin-bottom: 0
+			font-size: 13px
