@@ -24,6 +24,9 @@
 		top: 40px
 		left: 40px
 		z-index: 10
+		+sm
+			top: 20px
+			left: 20px
 	&__bottom
 		position: absolute
 		bottom: 0
@@ -34,17 +37,29 @@
 	&__controls
 		display: flex
 		margin-top: auto
+		+sm
+			flex-direction: column
 	&__btns-wrap
 		flex: 0 0 200px
 		display: flex
 		border-right: 1px solid #000
+		+sm
+			flex: auto
 	&__btns
 		display: flex
 		flex-wrap: wrap
 		justify-content: center
 		margin: auto
+		+sm
+			justify-content: space-between
+			margin: 0 auto
+			padding: 10px 20px
+			width: 100%
+			max-width: 320px
 	&__btn
 		padding: 10px
+		+sm
+			padding: 0
 	&__body
 		flex: 1
 		font-size: 14px
@@ -57,20 +72,39 @@
 		display: flex
 		justify-content: space-between
 		align-items: center
+		+sm
+			padding-left: 20px
+			padding-right: 20px
 	&__time
 		color: #9fa4aa
 	&__schedule
 		padding: 30px 38px
+		+sm
+			padding: 10px 60px 10px 20px
 	&__channel
 		display: inline-block
 		vertical-align: top
 		margin-right: 30px
+		img
+			max-width: 100%
+		+md
+			margin-right: 15px
+		+sm
+			width: 42px
+			vertical-align: middle
 	&__list
 		display: inline-block
 		vertical-align: top
+		+sm
+			max-width: calc(100% - 65px)
+			vertical-align: middle
 	&__programm
 		position: relative
 		color: #9fa4aa
+		+sm
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
 		a
 			color: inherit
 		&:not(:last-child)
@@ -88,6 +122,8 @@
 			font-weight: 500
 			color: #fff
 			font-size: 18px
+			+sm
+				font-size: 14px
 		span
 			display: inline-block
 			margin-right: 30px
@@ -95,9 +131,16 @@
 			font-size: 14px
 			color: #9fa4aa
 			letter-spacing: .06em
+			+sm
+				margin-right: 15px
 	&__label
 		display: inline-block
 		margin-right: 30px
+		+md
+			margin-right: 15px
+		+sm
+			display: block
+			margin-bottom: 7px
 	&__arrows
 		flex: 0 0 113px
 		border-left: 1px solid #000
@@ -106,4 +149,26 @@
 		justify-content: space-between
 		align-items: center
 		padding: 15px 10px
+		+from-sm
+			flex: 0 0 113px
+		+sm
+			position: absolute
+			right: 0
+			bottom: 0
+			height: 74px
+			padding-top: 5px
+			padding-bottom: 5px
+			.btn-arr
+				width: 30px
+				height: 30px
+			.btn-arr_top
+				i
+					border-width: 0 12px 15px
+			.btn-arr_bottom
+				i
+					border-width: 15px 12px 0
+	&__additional
+		+sm
+			.btn + .btn
+				margin-left: 10px
 
