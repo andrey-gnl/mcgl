@@ -67,8 +67,39 @@
 		transform: translateY(10px)
 		transition: opacity .3s, visibility .3s, transform .3s
 
+.nav_mod
+	position: relative
+	.nav
+		&__link
+			padding-bottom: 19px
+			padding-top: 22px
+		&__drop
+			top: 100%
+			left: 0
+			right: 0
+	> li
+		margin-right: 20px
+		+xs
+			&:not(:last-child)
+				margin-right: 20px
+
 .subnav
 	background: rgba(255,255,255,.05)
 	padding-top: 28px
 
+.navi
+	position: relative
+	z-index: 4
+	+from-sm
+		display: none
+	&__line
+		white-space: nowrap
+		overflow: auto
+		padding: 0 15px
+		background: #0f181d
+	&__menus
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
 

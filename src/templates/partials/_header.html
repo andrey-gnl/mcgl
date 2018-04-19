@@ -144,3 +144,32 @@
     </form>
   </div>
 </div>
+
+{% if demand == true%}
+<div class="navi">
+  <div class="navi__line">
+    <ul class="nav nav_mod">
+      <li><a href="#" class="nav__link is-active">Destacados</a></li>
+      <li>
+        {% if category %}
+        <span class="nav__link nav__link_span is-active js-toggle-navi-menu" data-menu="category">{{category}} {{mixins.icon('chevron')}}</span>
+        {% else %}
+        <span class="nav__link nav__link_span js-toggle-navi-menu" data-menu="category">Categories {{mixins.icon('chevron')}}</span>
+        {% endif %}
+      </li>
+    </ul>
+  </div>
+  <div class="navi__menus js-mob-menus">
+    <div class="m-menu js-navi-menu" data-menu="category">
+      <ul class="m-menu__list">
+        <li><a href="#">Películas</a></li>
+        <li><a href="#">Series</a></li>
+        <li><a href="#">Deportes</a></li>
+        <li><a href="#">Infantiles</a></li>
+        <li><a href="#">Culturales</a></li>
+        <li><a href="#">Plataformas Play</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endif %}
