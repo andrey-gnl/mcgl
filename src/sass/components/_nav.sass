@@ -73,6 +73,11 @@
 		&__link
 			padding-bottom: 19px
 			padding-top: 22px
+			.icon
+				transition: transform .3s
+			&.is-open
+				.icon
+					transform: rotate(180deg)
 		&__drop
 			top: 100%
 			left: 0

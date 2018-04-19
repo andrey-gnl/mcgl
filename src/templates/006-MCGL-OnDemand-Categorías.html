@@ -10,6 +10,10 @@ category: 'Peliculas'
     <div class="container">
       <div class="section__title">
         <h2 class="h2">PELÍCULAS - ON DEMAN</h2>
+        <div class="section__sel">
+            {%set channels = ['Todos','Canal 1', 'Canal 2', 'Canal 3']%}
+            {{mixins.select(options=channels)}}
+        </div>
       </div>
       <div class="section__body">
         {% include "partials/_items.html" %}

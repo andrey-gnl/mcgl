@@ -12,6 +12,11 @@
 			margin-bottom: 30px
 		+sm
 			margin-bottom: 20px
+			align-items: center
+		+xs
+			justify-content: flex-start
+			align-items: flex-start
+			flex-direction: column
 		h2, .h2, h3, .h3
 			flex: 1 0 auto
 	&__meta
@@ -31,8 +36,6 @@
 					margin-right: 26px
 				+xs
 					margin-bottom: 10px
-
-
 	&__select
 		padding-top: 20px
 		+from-xs
@@ -43,7 +46,10 @@
 		padding-bottom: 60px
 	&__empty
 		padding-top: 78px
-
+	&__sel
+		+xs
+			width: 100%
+			margin-top: 20px
 .section_lg
 	padding-bottom: 80px
 
