@@ -35,7 +35,10 @@
 
 	&__select
 		padding-top: 20px
-		border-top: 2px solid #081c26
+		+from-xs
+			border-top: 2px solid #081c26
+		+xs
+			padding-top: 40px
 	&__settings
 		padding-bottom: 60px
 	&__empty
@@ -54,3 +57,7 @@
 .section_no-pb-sm
 	+sm
 		padding-bottom: 0
+
+.section_pt-no-xs
+	+xs
+		padding-top: 0

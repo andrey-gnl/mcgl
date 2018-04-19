@@ -13,7 +13,7 @@
           </div>
           <div class="gallery__item-wrap">
             <div class="gallery__item" style="background-image: url('img/got.jpg');">
-              <a href="#" class="gallery__play play">
+              <a href="#" class="gallery__play">
                 <div class="gallery__play-cover play play_big"></div>
                 <div class="gallery__play-icon">{{mixins.btnIcon('fullscreen', circle=true, tag="span")}}</div>
               </a>
@@ -68,14 +68,14 @@
           <div class="info__progress">
             {{mixins.progress()}}
           </div>
-          <div class="info__buttons">
+          <div class="info__buttons {% if blockButtons == true %}info__buttons_mod{% endif %}">
             {% if blockButtons == true %}
-              {{mixins.btnIcon('play', 'REPRODUCIR')}}
-              {{mixins.btnIcon('heart', 'FAVORITO', checkbox=true)}}
-              {{mixins.btnIcon('record', 'Grabar')}}
-              {{mixins.btnIcon('proximas', 'PRÓXIMA EMISIÓN')}}
-              {{mixins.btnIcon('copy', 'OTROS EPISODIOS')}}
-              {{mixins.btnIcon('timer', 'AGENDAR')}}
+              <div class="info__button"> {{mixins.btnIcon('play', 'REPRODUCIR')}}</div>
+              <div class="info__button"> {{mixins.btnIcon('heart', 'FAVORITO', checkbox=true)}}</div>
+              <div class="info__button"> {{mixins.btnIcon('record', 'Grabar')}}</div>
+              <div class="info__button"> {{mixins.btnIcon('proximas', 'PRÓXIMA EMISIÓN')}}</div>
+              <div class="info__button"> {{mixins.btnIcon('copy', 'OTROS EPISODIOS')}}</div>
+              <div class="info__button"> {{mixins.btnIcon('timer', 'AGENDAR')}}</div>
             {% else %}
             <a href="#" class="button">VER TODOS EN VIVO</a>
             <a href="#" class="button">VER GRILLA</a>
