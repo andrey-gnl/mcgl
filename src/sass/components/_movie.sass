@@ -1,29 +1,46 @@
 .movie
-	display: flex
+	+from-sm
+		display: flex
 	&__side
 		position: relative
 		flex: 0 0 477px
 		width: 477px
 		margin-right: 35px
+		+md
+			width: 377px
+			flex: 0 0 377px
+		+sm
+			width: auto
+			flex: auto
+			margin: 0 -30px 30px
 	&__links
-		position: absolute
-		top: 100%
-		width: 100%
 		padding: 30px 10px 0
 		display: flex
 		justify-content: space-between
 		align-items: center
+		+from-sm
+			position: absolute
+			top: 100%
+			width: 100%
+		+sm
+			padding-top: 15px
 		a
 			color: #fff
 			font-size: 15px
 			transition: color .3s
 			letter-spacing: .06em
+			+sm
+				font-size: 13px
 			&:first-child
 				.icon
 					margin-right: 10px
+					+xs
+						margin-right: 5px
 			&:last-child
 				.icon
 					margin-left: 10px
+					+xs
+						margin-left: 5px
 			&:hover
 				color: $c-blue
 			.icon
@@ -31,15 +48,24 @@
 				font-size: 8px
 	&__image
 		height: 320px
-		border-radius: 4px
 		background-size: cover
 		background-position: center
+		+from-sm
+			border-radius: 4px
+		+md
+			height: 280px
+		+sm
+			width: 100%
+			height: 0
+			padding-bottom: 56.25%
 	&__info
 		flex: 1 1 auto
 		display: flex
 		flex-direction: column
 	&__footer
 		margin-top: auto
+		+sm
+			margin-top: 10px
 	&__footer-text
 		text-transform: uppercase
 		+pop
@@ -47,5 +73,5 @@
 		margin-bottom: 15px
 
 .movie_links
-	padding-bottom: 50px
-
+	+from-sm
+		padding-bottom: 50px

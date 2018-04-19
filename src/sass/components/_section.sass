@@ -44,12 +44,47 @@
 			padding-top: 40px
 	&__settings
 		padding-bottom: 60px
+		+md
+			padding-bottom: 40px
 	&__empty
 		padding-top: 78px
 	&__sel
 		+xs
 			width: 100%
 			margin-top: 20px
+	&__items
+		margin: 0 -15px
+		font-size: 0
+		+md
+			white-space: nowrap
+			overflow: auto
+			margin: 0 -20px
+		+sm
+			margin: 0 -30px
+	&__item
+		display: inline-block
+		vertical-align: top
+		font-size: 14px
+		padding: 0 15px 50px
+		width: 25%
+		+md
+			width: auto
+			padding-bottom: 20px
+			&:first-child
+				padding-left: 20px
+			&:last-child
+				padding-right: 20px
+			.item
+				width: 210px
+		+sm
+			padding: 0 10px 20px
+			&:first-child
+				padding-left: 30px
+			&:last-child
+				padding-right: 30px
+			.item
+				width: 193px
+
 .section_lg
 	padding-bottom: 80px
 

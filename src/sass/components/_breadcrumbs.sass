@@ -5,6 +5,8 @@
 	padding: 26px 0 24px
 	background: rgba(255,255,255,.05)
 	line-height: 1
+	+sm
+		padding: 20px 0 21px
 	li
 		display: inline-block
 		vertical-align: middle
@@ -20,9 +22,14 @@
 			transition: opacity .3s
 			&:hover
 				opacity: 1
+	&__list
+		+sm
+			margin: 0 -15px
 	&__icon
 		margin-right: 10px
 		padding-left: 10px
+		+sm
+			padding-left: 0
 		.icon
 			fill: rgba(#fff, .6)
 			font-size: 8px

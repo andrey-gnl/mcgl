@@ -12,7 +12,7 @@ title: 007-MCGL-OnDemand-DetalledeSerie-SinCargo
       {{mixins.movie()}}
     </div>
   </section>
-  <section class="section section_sm">
+  <section class="section section_pt-no-xs">
     <div class="container">
       <div class="section__title title">
         <h3 class="h3">Episodios por Temporada</h3>
@@ -21,9 +21,9 @@ title: 007-MCGL-OnDemand-DetalledeSerie-SinCargo
         {{mixins.select(false, ['Temporada 7', 'Item 2', 'Item 3'])}}
       </div>
       <div class="section__body">
-        <div class="row row_lg">
+        <div class="section__items">
           {% for item in range(0,7)%}
-          <div class="col-4">
+          <div class="section__item">
             {{mixins.item('T7 / E6 - Más allá del muro', 'img/got2.jpg')}}
           </div>
           {% endfor %}

@@ -1,9 +1,11 @@
 .chapter
 	margin: 0 -10px
 	+md
-		margin-right: -20px
+		// margin-right: -20px
+		margin: 0
 	+sm
-		margin-right: -30px
+		// margin-right: -30px
+		margin: 0
 	&:not(:last-child)
 		margin-bottom: 62px
 		+sm
@@ -15,14 +17,20 @@
 				overflow: hidden
 			+md
 				padding-bottom: 20px
+				margin: 0 -20px
+			+xs
+				margin: 0 -30px
 			.chapter__slide
-				padding: 0 10px
+				padding: 0 15px
 				+md
 					&:first-child
-						padding-left: 0
+						padding-left: 20px
 					&:last-child
 						padding-right: 20px
 				+sm
+					padding: 0 10px
+					&:first-child
+						padding-left: 30px
 					&:last-child
 						padding-right: 30px
 			.item
@@ -34,7 +42,6 @@
 		> div
 			margin: 0 10px
 		+r(1100)
-
 	.slick-arrow
 		position: absolute
 		width: 45px
@@ -55,11 +62,14 @@
 		justify-content: space-between
 		align-items: flex-end
 		margin: 0 10px 30px
+		// margin-bottom: 30px
 		+md
-			margin-right: 20px
+			margin-left: 0
+			margin-right: 0
+			// margin-right: 20px
 		+sm
-			margin-right: 30px
-			margin-bottom: 20px
+			// margin-right: 30px
+			// margin-bottom: 20px
 	&__change
 		line-height: 1.4
 	&__slide
