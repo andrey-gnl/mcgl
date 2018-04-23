@@ -6,7 +6,7 @@ activeMimc: 2
 {% extends "layouts/_layout.html" %}
 {% block content %}
 
-  <section class="section section_lg">
+  <section class="section section_no-pb">
     <div class="container">
       <div class="section__title">
         <h2 class="h2">MIS FAVORITOS</h2>
@@ -15,10 +15,10 @@ activeMimc: 2
         </div>
       </div>
       <div class="section__body">
-        <div class="chapter js-items">
-          <div class="chapter__title title">
+        <div class="section__body-row js-items">
+          <div class="section__title section__title_sm title">
             <h3 class="h3">Películas</h3>
-            <div class="chapter__change change js-change">
+            <div class="section__change change js-change">
               <div class="change__edit">
                 <a href="#" class="link js-change-edit">{{mixins.icon('pencil')}} <span>Editar</span></a>
               </div>
@@ -28,39 +28,34 @@ activeMimc: 2
               </div>
             </div>
           </div>
-          <div class="chapter__gallery">
-            <div class="row row_mb row_inline">
-              <div class="col-4">
+          <div class="section__items">
+            <div class="section__item">
                 {{mixins.item(name="Tory story 3", img="img/got.jpg", class="js-item", canDelete=true)}}
-              </div>
-
             </div>
           </div>
         </div>
-        <div class="chapter js-items">
-            <div class="chapter__title title">
-              <h3 class="h3">Culturales</h3>
-              <div class="chapter__change change js-change">
-                <div class="change__edit">
-                  <a href="#" class="link js-change-edit">{{mixins.icon('pencil')}} <span>Editar</span></a>
-                </div>
-                <div class="change__final">
-                  <a href="#" class="link js-edit-cancel">{{mixins.icon('close')}} <span>Cancelar</span></a>
-                  <a href="#" class="link is-active js-edit-save">{{mixins.icon('done')}} <span>Guardar</span></a>
-                </div>
+        <div class="section__body-row js-items">
+          <div class="section__title section__title_sm title">
+            <h3 class="h3">Culturales</h3>
+            <div class="section__change change js-change">
+              <div class="change__edit">
+                <a href="#" class="link js-change-edit">{{mixins.icon('pencil')}} <span>Editar</span></a>
               </div>
-            </div>
-            <div class="chapter__gallery">
-              <div class="row row_mb row_inline">
-                <div class="col-4">
-                  {{mixins.item(name="George Harrison: Living in a Material World", img="img/got2.jpg", class="js-item", canDelete=true)}}
-                </div>
-                <div class="col-4">
-                  {{mixins.item(name="Pulp Fiction", img="img/toy.jpg", class="js-item", canDelete=true)}}
-                </div>
+              <div class="change__final">
+                <a href="#" class="link js-edit-cancel">{{mixins.icon('close')}} <span>Cancelar</span></a>
+                <a href="#" class="link is-active js-edit-save">{{mixins.icon('done')}} <span>Guardar</span></a>
               </div>
             </div>
           </div>
+          <div class="section__items">
+            <div class="section__item">
+                {{mixins.item(name="George Harrison: Living in a Material World", img="img/got2.jpg", class="js-item", canDelete=true)}}
+            </div>
+            <div class="section__item">
+                {{mixins.item(name="Pulp Fiction", img="img/toy.jpg", class="js-item", canDelete=true)}}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
