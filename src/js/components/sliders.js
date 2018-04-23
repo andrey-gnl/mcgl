@@ -48,18 +48,18 @@ $('.js-slider').slick({
 
 // items slider
 {
-  $('.js-items-gallery').slick({
+  const slider = $('.js-items-gallery');
+  const config = {
     arrows: true,
     slidesToShow: 4,
-    infinite: false,
-    responsive: [
-      {
-        breakpoint: 1023,
-        settings: 'unslick'
-      }
-    ]
-  });
-  $(window).on('resize', () => {
-    $('.js-items-gallery').slick('resize');
+    infinite: false
+  };
+
+  $(window).on('resize load', () => {
+    if($(window).width() > 1023 && !slider.hasClass('slick-initialized')) {
+      slider.slick(config);
+    } else if($(window).width() < 1024 && slider.hasClass('slick-initialized')) {
+      slider.slick('unslick');
+    }
   });
 }
