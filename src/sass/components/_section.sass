@@ -18,7 +18,9 @@
 			align-items: flex-start
 			flex-direction: column
 		h2, .h2, h3, .h3
-			flex: 1 0 auto
+			flex: 1 1 auto
+			+from-xs
+				padding-right: 25px
 	&__title_sm
 		margin-bottom: 30px
 	&__meta
@@ -52,6 +54,8 @@
 			padding-bottom: 40px
 	&__empty
 		padding-top: 78px
+		+xs
+			padding-top: 40px
 	&__sel
 		+xs
 			width: 100%
