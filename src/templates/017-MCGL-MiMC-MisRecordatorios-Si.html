@@ -10,7 +10,9 @@ activeMimc: 1
     <div class="container">
       <div class="section__title">
         <h2 class="h2">MIS RECORDATORIOS AGENDADOS</h2>
-        {{mixins.select(false, ['Películas', 'Item 1', 'Item 2', 'Item 3'])}}
+        <div class="section__sel">
+          {{mixins.select(false, ['Películas', 'Item 1', 'Item 2', 'Item 3'])}}
+        </div>
       </div>
       <div class="section__body">
         <div class="chapter js-items">

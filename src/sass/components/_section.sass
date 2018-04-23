@@ -19,6 +19,8 @@
 			flex-direction: column
 		h2, .h2, h3, .h3
 			flex: 1 0 auto
+	&__title_sm
+		margin-bottom: 30px
 	&__meta
 		margin-top: 3px
 	&__btns
@@ -61,6 +63,8 @@
 			white-space: nowrap
 			overflow: auto
 			margin: 0 -20px
+			> *
+				white-space: normal
 		+sm
 			margin: 0 -30px
 	&__item
@@ -86,7 +90,10 @@
 				padding-right: 30px
 			.item
 				width: 193px
-
+	&__body-row
+		&:not(:last-child)
+			+md
+				padding-bottom: 20px
 .section_lg
 	padding-bottom: 80px
 

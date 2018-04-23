@@ -172,4 +172,14 @@
     </div>
   </div>
 </div>
+{% elif mimc %}
+<div class="navi">
+  <div class="navi__line">
+    <ul class="nav nav_mod">
+      {% for link in mimcItems %}
+      <li><a href="#" class="nav__link {%if loop.index == activeMimc%}is-active{%endif%}">{{link}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
 {% endif %}

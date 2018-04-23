@@ -11,12 +11,17 @@
 			top: 100%
 			margin-top: 30px
 			width: auto
+			+md
+				left: 15px
+				width: 100%
 			> li
 				display: inline-block
 				vertical-align: top
 				position: relative
 				&:not(:last-child)
 					margin-right: 40px
+					+lg
+						margin-right: 20px
 	&__link
 		position: relative
 		display: block

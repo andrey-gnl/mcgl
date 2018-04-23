@@ -1,5 +1,6 @@
 .chapter
-	margin: 0 -10px
+	&:not(.chapter_mod)
+		margin: 0 -10px
 	+md
 		// margin-right: -20px
 		margin: 0
@@ -84,6 +85,15 @@
 				width: 210px
 			+sm
 				width: 193px
+	&__row
+		font-size: 0
+		margin: 0 -15px
+	&__col
+		display: inline-block
+		vertical-align: top
+		width: 25%
+		padding: 0 15px
+		font-size: 14px
 
 .chapter_sm
 	&:not(:last-child)
@@ -164,6 +174,12 @@
 		border-radius: 3px
 		background: #000
 		border: 1px solid #081c26
+		+r(1200)
+			padding-left: 25px
+			padding-right: 25px
+		+md
+			padding-left: 15px
+			padding-right: 15px
 	&__text
 		+pop
 		font-size: 12px
@@ -181,6 +197,13 @@
 			letter-spacing: 0.06em
 			line-height: 1
 			margin-bottom: 7px
+			white-space: normal
+			+r(1200)
+				font-size: 16px
+			+lg
+				font-size: 14px
+			+xs
+				font-size: 13px
 	&__delete
 		position: absolute
 		top: 0
