@@ -1,14 +1,10 @@
 <svg width="70" height="55" viewBox="0 0 70 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>
-        señal-title
-    </title>
     <defs>
         <rect id="a" width="70" height="55" rx="4"/>
     </defs>
     <g fill="none" fill-rule="evenodd">
         <g style="mix-blend-mode:overlay">
             <use fill="#000204" style="mix-blend-mode:multiply" xlink:href="#a"/>
-            <rect stroke="#FFF" x=".5" y=".5" width="69" height="54" rx="4"/>
         </g>
         <text font-family="Poppins-Light, Poppins" font-size="10" font-weight="300" fill="#FFF" fill-opacity=".6">
             <tspan x="27" y="47">131</tspan>

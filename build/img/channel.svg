@@ -5,7 +5,6 @@
     <g fill="none" fill-rule="evenodd">
         <g style="mix-blend-mode:overlay">
             <rect width="70" height="55" rx="4" style="mix-blend-mode:multiply" fill="#000204"/>
-            <rect stroke="#FFF" opacity=".524" x=".5" y=".5" width="69" height="54" rx="4"/>
         </g>
         <path d="M34.649 18.285c0-.52-.482-.94-1.077-.94h-.225c-.594 0-1.082.42-1.082.94v6.43c0 .521.488.943 1.082.943h.225c.595 0 1.077-.422 1.077-.943v-6.43zm6.156 3.219c0 4.004-3.29 7.25-7.346 7.25-4.061 0-7.351-3.246-7.351-7.25 0-4.01 3.29-7.257 7.35-7.257 4.057 0 7.347 3.248 7.347 7.257zm2.575-7.493h-4.766l4.292 7.185L38.336 29h4.689l2.103-3.77L47.233 29H52l-4.49-7.804L51.646 14h-4.63l-1.808 3.148-1.828-3.137zM26.378 18.01h-5.164v2.041h4.132v3.998l-4.053-.037v4.981H17V14.011h9.06l.318 3.999z" fill="#FFF" fill-rule="nonzero"/>
         <text fill-opacity=".6" fill="#FFF" font-family="Poppins-Light, Poppins" font-size="10" font-weight="300">
