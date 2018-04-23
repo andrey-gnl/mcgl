@@ -95,7 +95,21 @@
 
 .subnav
 	background: rgba(255,255,255,.05)
-	padding-top: 28px
+	white-space: nowrap
+	overflow: auto
+	.container
+		+sm
+			padding-left: 15px
+			padding-right: 15px
+	.nav
+		li
+			+xs
+				margin-right: 20px
+		&__link
+			padding-top: 28px
+			+xs
+				padding-top: 22px
+				padding-bottom: 19px
 
 .navi
 	position: relative
