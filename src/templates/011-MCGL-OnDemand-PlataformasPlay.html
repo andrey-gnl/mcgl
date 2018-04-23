@@ -10,14 +10,16 @@ category: 'Plataformas Play'
     <div class="container">
       <div class="section__title">
         <h2 class="h2">Plataformas Play</h2>
-        {{mixins.select(false, ['Todos las Platformas', 'Item 1', 'Item 2', 'Item 3'])}}
+        <div class="section__sel">
+          {{mixins.select(false, ['Todos las Platformas', 'Item 1', 'Item 2', 'Item 3'])}}
+        </div>
       </div>
       <div class="section__body">
-        <div class="row">
+        <div class="row row_inline">
           {% set blocks = ['HBO GO', 'ESPN PLAY', 'CINEMAX GO', 'TNT GO', 'SPACE GO', 'CN GO', 'SONY PLAY', 'AXN', 'FOX', 'STUDIO UNIVERSAL', 'DISCOVERY KIDS ESP'] %}
 
           {% for item in blocks %}
-          <div class="col-4">
+          <div class="col-4 col-md-3 col-sm-2 col-xs-full">
             {{mixins.cItem(title=item)}}
           </div>
           {% endfor%}

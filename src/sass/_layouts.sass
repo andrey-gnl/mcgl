@@ -22,6 +22,8 @@
 	> div
 		float: left
 		padding: 0 15px 50px
+		+xs
+			padding-bottom: 25px
 
 .row_mb
 	margin-bottom: -50px
@@ -36,6 +38,18 @@
 
 .col-4
 	width: 25%
+
+.col-md-3
+	+md
+		width: 33.33%
+
+.col-sm-2
+	+sm
+		width: 50%
+
+.col-xs-full
+	+xs
+		width: 100%
 
 .hide-sm
 	+sm
