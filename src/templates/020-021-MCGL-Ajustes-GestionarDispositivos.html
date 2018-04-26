@@ -17,37 +17,39 @@ notActiveNav: true
       </div>
     </div>
     <div class="section__body js-items">
-      <div class="table">
-        <div class="table__header">
-          <div class="table__row">
-            <div class="table__cell table__id">ID DISPOSITIVO</div>
-            <div class="table__cell table__type">TIPO DE DISPOSITIVO</div>
-            <div class="table__cell table__start">INICIO</div>
-            <div class="table__cell table__end">ÚLTIMA ACTIVIDAD</div>
-            <div class="table__cell table__edit">
-              <div class="change js-change">
-                <div class="change__edit">
-                  <a href="#" class="link js-change-edit">{{mixins.icon('pencil')}} <span>Editar</span></a>
-                </div>
-                <div class="change__final">
-                  <a href="#" class="link js-edit-cancel">{{mixins.icon('close')}} <span>Cancelar</span></a>
-                  <a href="#" class="link is-active js-edit-save">{{mixins.icon('done')}} <span>Guardar</span></a>
+      <div class="table-wrap">
+        <div class="table">
+          <div class="table__header">
+            <div class="table__row">
+              <div class="table__cell table__id">ID DISPOSITIVO</div>
+              <div class="table__cell table__type">TIPO DE DISPOSITIVO</div>
+              <div class="table__cell table__start">INICIO</div>
+              <div class="table__cell table__end">ÚLTIMA ACTIVIDAD</div>
+              <div class="table__cell table__edit">
+                <div class="change js-change">
+                  <div class="change__edit">
+                    <a href="#" class="link js-change-edit">{{mixins.icon('pencil')}} <span>Editar</span></a>
+                  </div>
+                  <div class="change__final">
+                    <a href="#" class="link js-edit-cancel">{{mixins.icon('close')}} <span>Cancelar</span></a>
+                    <a href="#" class="link is-active js-edit-save">{{mixins.icon('done')}} <span>Guardar</span></a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="table__body">
-          {% set content = {id: '192874', type: 'Mac OS 12.12.5', start: '30/07/2017', end: '22/02/2018'} %}
-          {% for item in range(0, 4) %}
-          <div class="table__row js-item">
-            <div class="table__cell table__id">{{content.id}}</div>
-            <div class="table__cell table__type">{{content.type}}</div>
-            <div class="table__cell table__start">{{content.start}}</div>
-            <div class="table__cell table__end">{{content.end}}</div>
-            <div class="table__cell table__edit"><a href="#" class="link js-remove-item">{{mixins.icon('delete')}} <span>DESACTIVAR</span> </a></div>
+          <div class="table__body">
+            {% set content = {id: '192874', type: 'Mac OS 12.12.5', start: '30/07/2017', end: '22/02/2018'} %}
+            {% for item in range(0, 4) %}
+            <div class="table__row js-item">
+              <div class="table__cell table__id" title="ID DISPOSITIVO">{{content.id}}</div>
+              <div class="table__cell table__type" title="TIPO DE DISPOSITIVO">{{content.type}}</div>
+              <div class="table__cell table__start" title="INICIO">{{content.start}}</div>
+              <div class="table__cell table__end" title="ÚLTIMA ACTIVIDAD">{{content.end}}</div>
+              <div class="table__cell table__edit"><a href="#" class="link js-remove-item">{{mixins.icon('delete')}} <span>DESACTIVAR</span> </a></div>
+            </div>
+            {% endfor %}
           </div>
-          {% endfor %}
         </div>
       </div>
     </div>

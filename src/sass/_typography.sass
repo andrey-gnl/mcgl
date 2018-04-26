@@ -79,6 +79,22 @@ h3, .h3
 		display: inline-block
 		vertical-align: middle
 		line-height: 1
+		+md
+			font-size: 14px
+
+.link_single-mob
+	+sm
+		width: 30px
+		height: 30px
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		.icon
+			margin-right: 0
+		span
+			display: none
+		+ .link
+			margin-left: 0
 
 .link-more
 	text-transform: uppercase

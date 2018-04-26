@@ -1,16 +1,31 @@
+.table-wrap
+	overflow: auto
+
 .table
 	$this: &
 	+pop
 	font-size: 14px
+	min-width: 725px
 	&__row
 		display: flex
 		min-height: 60px
 		align-items: center
 	&__edit
 		margin-left: auto
+		min-width: 240px
+		text-align: right
+		+r(900)
+			min-width: 120px
+		+md
+			margin-left: 0
+			text-align: left
+			.change
+				text-align: left
 	&__header,  &__body
 		#{$this}__row
 				padding-left: 40px
+				+md
+					padding-left: 20px
 	&__header
 		border-bottom: 2px solid #0e222e
 		#{$this}__row
@@ -18,10 +33,34 @@
 			padding-bottom: 15px
 		#{$this}__cell
 			text-transform: uppercase
+		#{$this}__edit
+			+r(900)
+				.change
+					&__final
+						.link
+							position: relative
+							&:after
+								content: ''
+								position: absolute
+								width: 30px
+								height: 30px
+								top: -7px
+								left: -7px
+							.icon
+								margin-right: 0
+								font-size: 15px
+							span
+								display: none
 	&__body
 		font-size: 16px
+		+sm
+			font-size: 14px
 		#{$this}__row
 			padding-right: 40px
+			+md
+				padding-right: 20px
+			+r(800)
+				padding-right: 0
 			&:nth-child(odd)
 				background: rgba(#000, .2)
 		#{$this}__edit
@@ -31,6 +70,8 @@
 	&__cell
 		&:not(:last-child)
 			margin-right: 40px
+			+md
+				margin-right: 15px
 	&__id
 		flex: 0 0 115px
 	&__type
@@ -50,6 +91,5 @@
 			font-size: 25px
 	&__name
 		flex: 0 0 155px
-
 
 

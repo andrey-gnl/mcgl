@@ -5,21 +5,19 @@ searchActive: true
 {% extends "layouts/_layout.html" %}
 {% block content %}
 
-  <section class="section section_lg">
+  <section class="section">
     <div class="container">
       <div class="section__title">
         <h2 class="h2">1 resultado para ¨Game of Thrones¨</h2>
       </div>
       <div class="section__body">
-        <div class="chapter js-items">
-          <div class="chapter__title title">
-            <h3 class="h3">Series</h3>
-          </div>
-          <div class="chapter__gallery">
-            <div class="row row_mb row_inline">
-              <div class="col-4">
+        <div class="section__title section__title_sm title">
+          <h3 class="h3">Series</h3>
+        </div>
+        <div class="section__body">
+          <div class="section__items">
+            <div class="section__item">
                 {{mixins.item(name="Game of Thrones", img="img/got.jpg")}}
-              </div>
             </div>
           </div>
         </div>
