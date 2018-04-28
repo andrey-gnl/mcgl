@@ -48,10 +48,20 @@
 			background: #fff
 			opacity: 0
 			transition: opacity .3s ease
-		&.is-active, &:hover
+		&.is-active
 			opacity: 1
 			&:after
 				opacity: 1
+		&:hover
+			+from-sm
+				opacity: 1
+				&:after
+					opacity: 1
+		&:active
+			+sm
+				opacity: 1
+				&:after
+					opacity: 1
 	&__link_span
 		&:hover:not(.is-active)
 			&:after
